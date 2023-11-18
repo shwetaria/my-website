@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.awt.*;<br>
+            import java.awt.event.*;<br>
+            class awtpro1<br>
+            {<br>
+                awtpro1()<br>
+                {<br>
+                    Frame f= new Frame("checkbox Group");<br>
+                    Label l1= new Label("which is your favourite programming language?");<br>
+                    CheckboxGroup cg= new CheckboxGroup();<br>
+                    Checkbox c1= new Checkbox("HTML",cg, false);<br>
+                    Checkbox c2= new Checkbox("C",cg, false);<br><br>
+                    Checkbox c3= new Checkbox("C++",cg, false);<br>
+                    Checkbox c4= new Checkbox("JAVA",cg, false);<br>
+                    f.setSize(700,400);<br>
+                    f.setLayout( new FlowLayout());<br>
+                    f.setVisible(true);<br>
+                    f.add(l1);<br>
+                    f.add(c1);<br>
+                    f.add(c2);<br>
+                    f.add(c3);<br>
+                    f.add(c4);<br>
+                    f.addWindowListener (new WindowAdapter() {    <br>
+                        public void windowClosing (WindowEvent e) {    <br>
+                            System.exit(1);    <br>
+                        }    <br>
+                   });<br>
+                  }<br>
+                public static void main(String st[])<br><br>
+                {<br>
+                    new awtpro1();<br>
+                }<br>
+                
+            }
+        </p>
+    </body>
+</html>

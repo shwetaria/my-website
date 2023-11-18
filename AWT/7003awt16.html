@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.awt.*;<br>
+            import java.awt.event.*;<br>
+            
+            class textarea extends Frame {<br>
+                private TextArea textArea;<br>
+            
+                    textarea() {<br>
+                    setTitle("TextArea with FlowLayout");<br>
+                    setSize(400, 300);<br>
+            
+                    setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10)); <br>
+            
+                    textArea = new TextArea(10, 30); <br>
+                    add(textArea);<br>
+            
+                    addWindowListener(new WindowAdapter() {<br>
+                        public void windowClosing(WindowEvent we) {<br>
+                            System.exit(0);<br>
+                        }<br>
+                    });<br>
+                }<br>
+            
+                public static void main(String[] args) {<br>
+                    textarea app = new textarea();<br>
+                    app.setVisible(true);<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>
+

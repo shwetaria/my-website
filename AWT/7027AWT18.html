@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+			Calculator.java<br>
+			*/<br>
+			class Calculator extends java.awt.Frame<br>
+			/* implements java.awt.event.ActionListener */<br>
+			{<br>
+				/*<br>
+					---------------
+					| constructor |<br>
+					---------------
+				*/<br>
+				Calculator()<br>
+				{<br>
+					setSize(400,500);<br>
+					setResizable(false);<br>
+					setLayout(null);<br>
+			
+					add(Calculator.myField());<br>
+					<br>
+					Calculator.myButton(this,16);<br>
+				}<br>
+				/*<br>
+					====================================================
+					| myFont | get argument size and return Font<br>
+					====================================================
+				*/<br>
+				private static java.awt.Font myFont(int size)<br>
+				{<br>
+					return new java.awt.Font("Arial",0,size);<br>
+				}<br>
+				/*<br>
+					====================================================<br>
+					| myField | private function return TextField<br>
+					====================================================<br>
+				*/<br>
+				private static java.awt.TextField myField()<br>
+				{<br>
+					java.awt.TextField fld = new java.awt.TextField();<br>
+			
+					fld.setBounds(0,0,400,100);<br>
+					<br>
+					fld.setEditable(true);<br>
+					<br>
+					fld.setFont(Calculator.myFont(25));<br>
+					<br>
+					fld.setForeground(java.awt.Color.BLACK);<br>
+					<br>
+					fld.setBackground(java.awt.Color.WHITE);<br>
+					return fld;<br>
+				}<br>
+				/*<br>
+					====================================================<br>
+					| myButton | function arguments size or Frame<br>
+					====================================================<br>
+				*/<br>
+				private static void myButton(java.awt.Frame frame,int size)<br>
+				{<br>
+					java.awt.Button btn[] = new java.awt.Button[size];<br>
+					<br>
+					int x = 0, y = 100;	// default coordinates<br>
+					<br><br>
+					char btn_label = ' ';<br>
+					<br>
+					for (int i = 0; i < size; i++)<br>
+					{<br>
+						btn[i] = new java.awt.Button();<br>
+			
+						if (i > 9)<br>
+						{<br>
+							switch(i)<br>
+							{<br>
+								case 10 : btn_label = '+'; break;<br>
+			
+								case 11 : btn_label = '-'; break;<br>
+								<br>
+								case 12 : btn_label = '*'; break;<br>
+								<br>
+			
+								case 14 : btn_label = '%'; break;<br>
+			
+								default : btn_label = '=';<br>
+							}<br>
+							btn[i].setLabel(""+btn_label+"");<br>
+						}<br>
+						else<br>
+						{<br>
+							btn[i].setLabel(""+i+"");<br>
+						}<br>
+						<br>
+						if (i != 0)<br><br>
+						{<br>
+							if ((i%4) == 0)<br>
+							{<br>
+								x = 0;<br>
+								y += 100;<br>
+							}<br>
+							else<br>
+							{<br>
+								x += 100;<br>
+							}<br>
+						}<br>
+						btn[i].setBounds(x,y,100,100);<br>
+						<br>
+						Calculator.buttonStyle(btn[i],25);<br>
+			
+						// btn[i].addActionListener(btn[i]);<br>
+			
+						frame.add(btn[i]);<br>
+					}<br>
+				}<br>
+				/*
+					====================================================<br>
+					| buttonStyle | function get arugment size Button<br>
+					====================================================<br>
+				*/<br>
+				private static void buttonStyle(java.awt.Button btn, int size)<br>
+				{<br>
+					btn.setFont(Calculator.myFont(size));<br>
+					btn.setForeground(java.awt.Color.GRAY);<br>
+					btn.setBackground(java.awt.Color.WHITE);<br>
+				}<br>
+				/*<br>
+					===================================================
+					| buttonActionStyle | get argument size and Button<br>
+					===================================================
+				*/
+				private static void buttonActionStyle(java.awt.Button btn, int size)<br>
+				{<br>
+					btn.setFont(Calculator.myFont(size));<br>
+					btn.setForeground(java.awt.Color.BLACK);<br>
+					btn.setBackground(java.awt.Color.WHITE);<br>
+				}
+				/*
+					@Override : ActionListener<br>
+				public void actionPerformed(java.awt.event.ActionEvent element)<br>
+				{<br><br><br>
+					Calculator.buttonActionStyle(this,20);<br>
+			
+					System.out.println(" button "+this.getLabel());<br>
+				}<br>
+				*/<br>
+				/*
+					[ main function ]----------------------------------<br>
+				*/
+				public static void main(String args[])
+				{<br>
+					System.out.println(" Calculator execute ... ");<br>
+					<br>
+					new Calculator().setVisible(true);<br>
+				}<br>
+			}<br>
+			// the end ---
+        </p>
+    </body>
+</html>
+
+-	

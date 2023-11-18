@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.awt.*;<br>
+            import java.awt.event.*;<br>
+            
+            class a{<br>
+                public static void main(String[] x) <br>
+                {<br>
+                    // Create a new frame.<br>
+                    Frame f = new Frame("AWT Button custom Layout ");<br>
+            
+                    // Set the size of the frame.<br>
+                    f.setSize(300, 300);<br>
+            
+                   
+                    // Create a button and add it to the frame.<br>
+                    Button b1= new Button("Click me!");<br>
+                    
+                    // Set the layout manager for the frame tocustom layout.<br>
+                    b1.setBounds(150,100,60,60);<br>
+                    f.add(b1);<br>
+                    <br>
+                    // Create a label and add it to the frame.<br>
+                    Label l1 = new Label("Please click the button.");<br>
+                    f.add(l1);<br>
+                    <br>
+                    // Display the frame.<br>
+                    f.setVisible(true);<br>
+                     // Handle the window closing event.<br>
+                    f.addWindowListener(new WindowAdapter() {<br>
+                        public void windowClosing(WindowEvent e) {<br>
+                            System.exit(0);<br>
+                        }<br>
+                    });<br>
+                    <br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>

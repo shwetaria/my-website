@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.awt.*;<br>
+            import java.awt.event.*;<br>
+             class CustomCheckboxLayoutExample extends Frame {<br>
+                public CustomCheckboxLayoutExample() {<br>
+                    setTitle("CheckboxGroup with Custom Layout");<br>
+                    setSize(300, 200);<br>
+                    addWindowListener(new WindowAdapter() {<br>
+                        public void windowClosing(WindowEvent we) {<br>
+                            System.exit(0);<br>
+                        }<br>
+                    });<br>
+                    <br>
+                    <br>
+                    CheckboxPanel checkboxPanel = new CheckboxPanel();<br>
+            
+                   
+                    CheckboxGroup checkboxGroup = new CheckboxGroup();<br>
+                    <br>
+                    Checkbox checkbox1 = new Checkbox("Option 1", checkboxGroup, false);<br>
+                    Checkbox checkbox2 = new Checkbox("Option 2", checkboxGroup, false);<br>
+                    Checkbox checkbox3 = new Checkbox("Option 3", checkboxGroup, false);<br>
+                    <br>
+                    checkboxPanel.addCheckbox(checkbox1);<br>
+                    checkboxPanel.addCheckbox(checkbox2);<br><br>
+                    checkboxPanel.addCheckbox(checkbox3);<br>
+            
+                    
+                    add(checkboxPanel);<br><br>
+                }<br>
+                <br><br>
+                public static void main(String[] args) {<br>
+                    CustomCheckboxLayoutExample example = new CustomCheckboxLayoutExample();<br>
+                    example.setVisible(true);<br>
+                }<br>
+            }<br>
+            
+            class CheckboxPanel extends Panel {<br>
+                private int checkboxCount;<br>
+                private int padding = 10;<br>
+                <br>
+                public CheckboxPanel() {<br>
+                    setLayout(null); // Use a null layout for custom positioning<br>
+                }<br>
+            
+                public void addCheckbox(Checkbox checkbox) {<br>
+                    checkboxCount++;<br>
+                    checkbox.setBounds(padding, checkboxCount * 30, 100, 20);<br>
+                    add(checkbox);<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+</html>
+

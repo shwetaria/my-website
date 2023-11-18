@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.awt.*;<br>
+            import java.awt.event.*;<br>
+            
+            class CustomLayoutExample {<br>
+                public static void main(String[] args) {<br>
+                    
+                    Frame frame = new Frame("Custom Layout Example");<br>
+            
+                   
+                    TextArea textArea = new TextArea("This is a TextArea with a custom layout.");<br>
+            
+                    
+                    frame.setLayout(new GridBagLayout());<br>
+                    GridBagConstraints gbc = new GridBagConstraints();<br>
+                    gbc.insets = new Insets(10, 10, 10, 10); // Add some padding<br>
+            
+                    
+                    gbc.gridx = 0;<br>
+                    gbc.gridy = 0;<br>
+                    gbc.fill = GridBagConstraints.BOTH;<br>
+                    gbc.weightx = 1.0;<br>
+                    gbc.weighty = 1.0;<br>
+                    frame.add(textArea, gbc);<br>
+                    <br>
+                    
+                    frame.addWindowListener(new WindowAdapter() {<br>
+                        public void windowClosing(WindowEvent e) {<br>
+                            System.exit(0);<br>
+                        }<br>
+                    });<br>
+            
+                   
+                    frame.setSize(400, 300);<br>
+                    frame.setVisible(true);<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+</html>
+

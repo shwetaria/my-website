@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.awt.Button;<br>
+            import java.awt.Frame;<br>
+            
+            class AWTButtonExample {<br>
+                public static void main(String[] args) {<br>
+                    Frame frame = new Frame("AWT Button Example");<br>
+            
+                   
+                    Button northButton = new Button("North");<br>
+                    Button eastButton = new Button("East");<br>
+                    Button westButton = new Button("West");<br>
+                    Button southButton = new Button("South");<br>
+                    Button centerButton = new Button("Center");<br>
+            
+                   
+                    frame.add(northButton, BorderLayout.NORTH);<br>
+                    frame.add(eastButton, BorderLayout.EAST);<br>
+                    frame.add(westButton, BorderLayout.WEST);<br>
+                    frame.add(southButton, BorderLayout.SOUTH);<br>
+                    frame.add(centerButton, BorderLayout.CENTER);<br>
+            
+                    <br>
+                    frame.setSize(400, 300);<br>
+                    frame.setVisible(true);<br>
+            
+                   
+                    frame.addWindowListener(new java.awt.event.WindowAdapter() {<br>
+                        public void windowClosing(java.awt.event.WindowEvent windowEvent) {<br>
+                            System.exit(0);<br>
+                        }<br>
+                    });<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+</html>
+

@@ -1,0 +1,61 @@
+// Create a simple AWT application that displays a List with FlowLayout manager. (Program 14)
+// Created by Aryan , Rollno 7070
+// Note : In order to compile and run this program , rename it from "7070Awt14.java" to "Awt14.java"
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.awt.*;<br>
+            import java.awt.event.*;<br>
+            <br>
+            class Awt14 {<br>
+                private Frame frame;<br>
+                private List myList;<br>
+            
+                public Awt14() {<br>
+                    frame = new Frame("AWT List Example");<br>
+                    myList = new List();<br>
+            
+                    // Add items to the List<br>
+                    myList.add("Item 1");<br>
+                    myList.add("Item 2");<br>
+                    myList.add("Item 3");<br>
+                    myList.add("Item 4");<br>
+                    myList.add("Item 5");<br>
+            
+                    // Set FlowLayout for the frame<br>
+                    frame.setLayout(new FlowLayout());<br>
+                    <br>
+                    // Add the List to the frame<br>
+                    frame.add(myList);<br>
+                    <br>
+                    // Add a WindowListener to handle closing the frame<br>
+                    frame.addWindowListener(new WindowAdapter() {<br>
+                        public void windowClosing(WindowEvent windowEvent) {<br>
+                            System.exit(0);<br>
+                        }<br>
+                    });<br>
+            
+                    // Set frame properties<br>
+                    frame.setSize(300, 200);<br>
+                    frame.setVisible(true);<br>
+                }<br>
+                <br>
+                public static void main(String[] args) {<br>
+                    new Awt14();<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+</html>
+
