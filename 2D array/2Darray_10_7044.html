@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>class Arr2 {<br>
+            <br>
+            public static void main(String[] args) {
+                <br>
+                int a[][] = {<br>
+                        { 1, 2, 4, 5 },<br>
+                        { 6, 7, 8, 9 },<br>
+                        { 10, 11, 12, 13 }<br>
+                };<br>
+        
+                int rows = a.length;<br>
+                int columns = a[0].length;<br>
+                int transpose[][] = new int[columns][rows];<br>
+        
+                System.out.println("_____________Printing matrix__________________");<br>
+                for (int i = 0; i < rows; i++) {<br>
+                    for (int j = 0; j < columns; j++) {<br>
+                        System.out.print("   " + a[i][j]);<br>
+                        transpose[j][i] = a[i][j];<br>
+                    }<br>
+                    System.out.println("\n");<br>
+                }<br>
+        
+                System.out.println("_____________Printing Transpose matrix__________________");<br>
+        
+                for (int i = 0; i < columns; i++) {<br>
+                    for (int j = 0; j < rows; j++) {<br>
+        
+                        System.out.print("  " + transpose[i][j]);<br>
+        
+                    }<br>
+                    System.out.println("\n");<br>
+                }<br>
+        
+            }<br>
+        
+        }<br>
+
+        </p>
+    </body>
+</html>
+
+class Arr2 {
+
+    public static void main(String[] args) {
+
+        int a[][] = {
+                { 1, 2, 4, 5 },
+                { 6, 7, 8, 9 },
+                { 10, 11, 12, 13 }
+        };
+
+        int rows = a.length;
+        int columns = a[0].length;
+        int transpose[][] = new int[columns][rows];
+
+        System.out.println("_____________Printing matrix__________________");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print("   " + a[i][j]);
+                transpose[j][i] = a[i][j];
+            }
+            System.out.println("\n");
+        }
+
+        System.out.println("_____________Printing Transpose matrix__________________");
+
+        for (int i = 0; i < columns; i++) {
+            for (int j = 0; j < rows; j++) {
+
+                System.out.print("  " + transpose[i][j]);
+
+            }
+            System.out.println("\n");
+        }
+
+    }
+
+}

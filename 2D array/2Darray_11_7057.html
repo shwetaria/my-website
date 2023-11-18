@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class Identity<br>
+            {    <br>
+                public static void main(String[] args) { <br>   
+                    int rows, cols;    <br>
+                    boolean flag = true;    <br>
+                        
+                  
+                    int a[][] = {       <br>
+                                    {1, 0, 0},    <br>
+                                    {0, 1, 0},  <br>  
+                                    {0, 0, 1}   <br> 
+                                };    <br>
+                        
+                
+                
+                      rows = a.length;    <br>
+                    cols = a[0].length;    <br>
+                        
+                  
+                    if(rows != cols){  <br>  
+                        System.out.println("Matrix should be a square matrix");   <br> 
+                    }    <br>
+                    else {    <br>
+                        <br>
+                        for(int i = 0; i < rows; i++){    <br>
+                            for(int j = 0; j < cols; j++){    <br>
+                              if(i == j && a[i][j] != 1){    <br>
+                                  flag = false;    <br>
+                                  break;    <br>
+                              }    <br>
+                              if(i != j && a[i][j] != 0){    <br>
+                                  flag = false;    <br>
+                                  break;    <br>
+                              }   <br> 
+                            }    <br>
+                        }    <br>
+                            
+                        if(flag) <br>   
+                            System.out.println("Given matrix is an identity matrix");  <br>  
+                        else    
+                            System.out.println("Given matrix is not an identity matrix"); <br>   
+                    }    <br>
+                }    <br><br>
+            }    <br>
+        </p>
+    </body>
+</html>
+
+
+

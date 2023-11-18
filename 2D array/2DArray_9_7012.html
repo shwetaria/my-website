@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            class ary2 {<br>
+                public static void main(String[] args) {<br>
+                    int[][] matrix = {<br>
+                        {1, 2, 3},<br>
+                        {4, 5, 6},<br>
+                        {7, 8, 9}<br><br>
+                    };<br>
+            
+                    int rows = matrix.length;<br>
+                    int columns = matrix[0].length;<br>
+            
+                    int[] rowSums = new int[rows];<br>
+                    int[] columnSums = new int[columns];<br>
+            
+                    // Calculate row sums<br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        for (int j = 0; j < columns; j++) {<br>
+                            rowSums[i] += matrix[i][j];<br>
+                        }<br>
+                    }<br>
+                    <br><br>
+                    // Calculate column sums<br>
+                    for (int j = 0; j < columns; j++) {<br>
+                        for (int i = 0; i < rows; i++) {<br>
+                            columnSums[j] += matrix[i][j];<br>
+                        }<br>
+                    }<br>
+            
+                    // Print row sums<br>
+                    System.out.println("Sum of each row:");<br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        System.out.println("Row " + (i + 1) + ": " + rowSums[i]);<br>
+                    }<br>
+            
+                    // Print column sums<br>
+                    System.out.println("\nSum of each column:");<br>
+                    for (int j = 0; j < columns; j++) {<br>
+                        System.out.println("Column " + (j + 1) + ": " + columnSums[j]);<br>
+                    }<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>
+

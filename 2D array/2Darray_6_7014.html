@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            class LowerTriangular <br>   
+            {    <br>
+                public static void main(String[] args) { <br>   
+                int rows, cols;    <br>
+                int a[][] = {       <br>
+                             {1, 2, 3},    <br>
+                             {8, 6, 4},   <br> 
+                             {4, 5, 6}    <br>
+                                };     <br>   
+                      rows = a.length;  <br>  
+                      cols = a[0].length;    <br>
+                        
+                      if(rows != cols){    <br>
+                          System.out.println("Matrix should be a square matrix");  <br>  
+                      }    <br>
+                      else {      <br>
+                          System.out.println("Lower triangular matrix: ");    <br>
+                          for(int i = 0; i < rows; i++){    <br>
+                              for(int j = 0; j < cols; j++){   <br> 
+                                if(j > i)    <br>
+                                  System.out.print("0 ");  <br>   
+                                else     <br>
+                                  System.out.print(a[i][j] + " ");     <br>
+                            }     <br>
+                            System.out.println();     <br>
+                        }     <br>
+                    }     <br>
+                }     <br>
+            }    
+        </p>
+    </body>
+</html>
+
+
+
+

@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            import java.util.Scanner;<br>
+
+            class MatrixSubtraction {<br>
+                public static void main(String[] args) {<br>
+                    Scanner input = new Scanner(System.in);<br>
+            
+                    System.out.print("Enter the number of rows: ");<br>
+                    int rows = input.nextInt();<br>
+                    System.out.print("Enter the number of columns: ");<br>
+                    int columns = input.nextInt();<br>
+            
+                    int[][] matrix1 = new int[rows][columns];<br>
+                    int[][] matrix2 = new int[rows][columns];<br>
+                    int[][] result = new int[rows][columns];<br>
+            
+                    // Input for the first matrix<br>
+                    System.out.println("Enter elements of the first matrix:");<br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        for (int j = 0; j < columns; j++) {<br>
+                            matrix1[i][j] = input.nextInt();<br>
+                        }<br>
+                    }<br>
+                    <br>
+                    // Input for the second matrix<br>
+                    System.out.println("Enter elements of the second matrix:");<br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        for (int j = 0; j < columns; j++) {<br>
+                            matrix2[i][j] = input.nextInt();<br>
+                        }<br>
+                    }<br>
+            
+                    // Subtract the matrices<br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        for (int j = 0; j < columns; j++) {<br>
+                            result[i][j] = matrix1[i][j] - matrix2[i][j];<br>
+                        }<br>
+                    }<br>
+                    <br>
+                    // Display the result<br>
+                    System.out.println("Result of matrix subtraction:");<br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        for (int j = 0; j < columns; j++) {<br>
+                            System.out.print(result[i][j] + " ");<br>
+                        }<br>
+                        System.out.println();<br>
+                    }<br>
+            
+                    input.close();<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>
+

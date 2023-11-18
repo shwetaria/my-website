@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.util.Scanner;<br>
+
+            class transposematrix {<br>
+                public static void main(String[] a) {<br>
+                    Scanner s = new Scanner(System.in);<br>
+            
+                    System.out.print("Enter number of rows: ");<br>
+                    int rows = s.nextInt();<br>
+                    System.out.print("Enter number of columns: ");<br>
+                    int columns = s.nextInt();<br>
+                    <br>
+                    int[][] matrix = new int[rows][columns];<br>
+                    <br>
+                    System.out.println("Enter elements of the matrix:");<br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        for (int j = 0; j < columns; j++) {<br>
+                            matrix[i][j] = s.nextInt();<br>
+                        }<br>
+                    }<br>
+                    <br>
+                    int[][] transpose = new int[columns][rows];<br>
+                    <br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        for (int j = 0; j < columns; j++) {<br>
+                            transpose[j][i] = matrix[i][j];<br>
+                        }<br>
+                    }<br>
+            
+                    System.out.println("Original Matrix:");<br>
+                    for (int i = 0; i < rows; i++) {<br>
+                        for (int j = 0; j < columns; j++) {<br>
+                            System.out.print(matrix[i][j] + " ");<br>
+                        }<br>
+                        System.out.println();<br>
+                    }<br>
+                    <br><br>
+                    System.out.println("Transposed Matrix:");<br>
+                    for (int i = 0; i < columns; i++) {<br>
+                        for (int j = 0; j < rows; j++) {<br>
+                            System.out.print(transpose[i][j] + " ");<br>
+                        }<br>
+                        System.out.println();<br>
+                    }<br>
+            
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>
+
+

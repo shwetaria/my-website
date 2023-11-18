@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            import java.util.Scanner; <br>
+
+            class uppertriangularmatrix { <br>
+                public static void main(String[] a) { <br>
+                            
+                    Scanner s = new Scanner(System.in); <br>
+            
+                    System.out.print("Enter the number of rows and columns for the square matrix: "); <br>
+                    int n = s.nextInt(); <br>
+            
+                    int[][] matrix = new int[n][n]; <br>
+            
+                    System.out.println("Enter matrix elements:"); <br>
+                    for (int i = 0; i < n; i++) { <br>
+                        for (int j = 0; j < n; j++) { <br>
+                            matrix[i][j] = s.nextInt(); <br>
+                        } <br>
+                    } <br>
+            
+                    System.out.println("Upper Triangular Matrix:"); <br>
+                    for (int i = 0; i < n; i++) { <br>
+                        for (int j = 0; j < n; j++) { <br>
+                            if (j >= i) { <br>
+                                System.out.print(matrix[i][j] + " "); <br>
+                            } else { <br>
+                                System.out.printv("  "); <br>
+                            } <br>
+                        } <br>
+                        System.out.println(" "); <br>
+                    }  <br>
+            
+                    } <br>
+            }
+        </p>
+    </body>
+</html>
