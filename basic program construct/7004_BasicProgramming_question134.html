@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class a <br>
+            {<br>
+                <br>
+                public static float roundFloat(float number, int decimalPlaces)<br>
+             {<br>
+                    float factor = (float) Math.pow(10, decimalPlaces);<br>
+                    number = number * factor;<br>
+                    number = Math.round(number);<br>
+                    number = number / factor;<br>
+                    return number;<br>
+              }<br>
+              <br>
+                public static void main(String[] args) <br>
+                {<br>
+                    float original;<br>
+                    int decimalPlaces;<br>
+                java.util.Scanner s1=new java.util.Scanner(System.in);<br>
+                System.out.print("Enter the float number :- ");<br>
+                original=s1.nextFloat();<br>
+                System.out.print("Enter the round decimal number :- ");<br>
+                decimalPlaces=s1.nextInt();<br>
+                    float roundedNumber = roundFloat(original, decimalPlaces);<br>
+                    System.out.println("Original number: " + original);<br>
+                    System.out.println("Rounded number to " + decimalPlaces + " decimal places: " + roundedNumber);<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

@@ -1,0 +1,41 @@
+
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                class uniquearray{<br>
+                    public static void main(String arg[]) throws java.io.IOException{<br>
+                    java.io.InputStreamReader isr= new java.io.InputStreamReader(System.in);<br>
+                    java.io.BufferedReader br= new java.io.BufferedReader(isr);<br>
+                    <br>
+                    int arr1[];<br>
+                    arr1= new int[5];<br>
+                    for(int i=0; i<5;i++){<br>
+                    System.out.print("Enter value of "+i+" ");<br>
+                    String str1= br.readLine();<br>
+                    int x = Integer.parseInt(str1);<br>
+                    arr1[i]=x;<br>
+                    }<br>
+                    System.out.println("\n unique elements in array are: ");<br>
+                    for(int i=0;i<5;i++){<br>
+                    int count=0;<br>
+                    int key= arr1[i];<br>
+                    for(int j=0; j<5;j++){<br>
+                    if(j!=i){<br>
+                    if(key==arr1[j]){count++;}}<br>
+                    }<br>
+                    if(count==0){<br>
+                    System.out.println(key);}<br>
+                    }}}<br>
+            </p>
+        </body>
+    </html>

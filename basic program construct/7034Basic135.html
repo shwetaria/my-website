@@ -1,0 +1,32 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                class number<br>
+                {<br>
+                    public static void main(String arg[])throws java.io.IOException<br>
+                    {<br>
+                        double a;<br>
+                        int b;<br>
+                        java.io.BufferedReader input = new java.io.BufferedReader (new java.io.InputStreamReader(System.in));<br>
+                        System.out.println("Enter a number to check whether it is integer or not ");<br>
+                        a= Double.parseDouble(input.readLine());<br>
+                        b=(int)a;<br>
+                        if(a-b!=0)<br>
+                        System.out.println(a+" it is not an integer");<br>
+                        else<br>
+                        System.out.println(a+" it is a integer");<br>
+                    }<br>
+                }<br>
+            </p>
+        </body>
+    </html>

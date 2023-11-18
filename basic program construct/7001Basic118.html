@@ -1,0 +1,40 @@
+html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class oneHundredEighteen {<br>
+                public static void main(String[] args) throws java.io.IOException {<br>
+                    int num = 0, first = 0, second = 1, next = 0;<br>
+                    java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br>
+                    System.out.print("Enter a number: ");<br>
+                    try {<br>
+                        num = java.lang.Integer.parseInt(reader.readLine());<br>
+                        System.out.println("Fibonnaci series of " + num + " terms is ");<br>
+                        for (int i = 1; i <= num; i++) {<br>
+                            if(i==1) System.out.print(first + " ");<br>
+                            else if(i==2) System.out.print(second + " ");<br>
+                            else{<br>
+                                next = first + second;<br>
+                                System.out.print(next + " ");<br>
+                                first = second;<br>
+                                second = next;<br>
+                            }<br>
+                        }<br>
+                        System.out.println();<br>
+                    } <br>catch (java.lang.NumberFormatException e) {<br>
+                        System.out.println("Invalid input. Please enter a valid number.");<br>
+                    }<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

@@ -1,0 +1,72 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                class number<br>
+                {<br>
+                    public static void main(String arg[])throws java.io.IOException<br>
+                    {<br>
+                        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br>
+                        double max = Double.MIN_VALUE;<br>
+                        double min = Double.MAX_VALUE;<br>
+                        <br>
+                        // int num=1;<br>
+                        // System.out.println("Enter numbers, to quit enter any non-numeric character : ");<br>
+                        // while(true)<br>
+                        // {   try<br>
+                        //    {num= Integer.parseInt(input.readLine());}<br>
+                        //    catch(java.lang.NumberFormatException a)<br>
+                        //    {<br>
+                        //        break;<br>
+                        //    }<br>
+                        //     if(num<0)<br>
+                        //     negative ++;<br>
+                        //     else if (num>0)<br>
+                        //     positive++;<br>
+                        //     else<br>
+                        //     zeros++;<br>
+                        // }<br>
+                
+                
+                
+                        Double num;<br>
+                        String a="";<br>
+                        System.out.println("Enter numbers, to quit enter q : ");<br>
+                        while(true)<br>
+                        {   try<br>
+                           {<br>
+                               a=input.readLine();<br>
+                               num= Double.parseDouble(a); <br>
+                            }<br>
+                            catch(java.lang.NumberFormatException e)<br>
+                           {<br>
+                               if(a.equals("q"))<br>
+                               break;<br>
+                               else continue;<br>
+                           }<br>
+                            if(num>max)<br>
+                            max=num;<br>
+                            if(num<min)<br>
+                            min=num;<br>
+                        }<br>
+                
+                    System.out.println("The maximum number was "+max);<br>
+                    System.out.println("The minimum number was "+min);<br>
+                
+                
+                
+                
+                    }<br>
+                }<br>
+            </p>
+        </body>
+    </html>

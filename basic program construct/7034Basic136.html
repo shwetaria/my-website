@@ -1,0 +1,31 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                class number<br>
+                {<br>
+                    public static void main(String arg[])throws java.io.IOException<br>
+                    {<br>
+                        int a;<br>
+                        int b;<br>
+                        java.io.BufferedReader input = new java.io.BufferedReader (new java.io.InputStreamReader(System.in));<br>
+                        System.out.println("Enter dividend ");<br>
+                        a= Integer.parseInt(input.readLine());<br>
+                        System.out.println("Enter divisor ");<br>
+                        b= Integer.parseInt(input.readLine());<br>
+                        <br>
+                        System.out.println("The round-up division of the given numbers is "+((a+b-1)/b));<br>
+                    }<br>
+                }<br>
+            </p>
+        </body>
+    </html>

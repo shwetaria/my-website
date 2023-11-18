@@ -1,0 +1,41 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+				import java.util.Scanner;<br>
+				<br>
+				
+				class Comparetwonumbers<br>
+				{<br>
+					void CheckEqual(){<br>
+						int num1, num2;<br>
+						System.out.println("Program to compare two numbers");<br>
+						Scanner scan = new Scanner(System.in);<br>
+						System.out.print("Enter first number : ");<br>
+						num1 = scan.nextInt();<br>
+						System.out.print("Enter second number : ");<br>
+						num2 = scan.nextInt();<br>
+						if(num1 == num2){<br>
+							System.out.println("Both numbers are equal");<br>
+						}<br>
+						else{<br>
+							System.out.println("Numbers are not equal");<br>
+						}<br>
+					}<br>
+					public static void main(String args[]){<br>
+						Comparetwonumbers obj = new  Comparetwonumbers();<br>
+						obj.CheckEqual();<br>
+					}<br>
+				}<br>
+            </p>
+        </body>
+    </html>

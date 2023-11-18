@@ -1,0 +1,40 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                // Swapping two variables<br>
+                import java.util.Scanner;<br>
+                class Bpc6{<br>
+                    void swap(int f,int s){<br>
+                        System.out.println("After Swapping both variables ");<br>
+                        f=f+s;<br>
+                        s=f-s;<br>
+                        f=f-s;<br>
+                        System.out.println("First Number : "+f);<br>
+                        System.out.println("Second Number : "+s);<br>
+                    }<br>
+                }<br>
+                class b{<br>
+                    public static void main(String str[]){
+                    Bpc6 obj = new Bpc6();<br>
+                    Scanner sc=new Scanner(System.in);<br>
+                    System.out.println("Enter the first Number : ");<br>
+                    int f=sc.nextInt();<br>
+                    System.out.println("Enter the Second Number : ");<br>
+                   int s=sc.nextInt(); <br>
+                   obj.swap(f,s);<br>
+                
+                }<br>
+                }<br>
+            </p>
+        </body>
+    </html>

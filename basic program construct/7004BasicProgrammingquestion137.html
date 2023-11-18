@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            public class RomanToInteger<br>
+            {<br>
+               <br>
+                   public static void main(String[] args)<br>
+                {<br>
+                       String romanNumeral;<br>
+                   java.util.Scanner s1=new java.util.Scanner(System.in);<br>
+                   romanNumeral=s1.nextLine(); <br>
+                       int integerValue = convertRomanToInt(romanNumeral);<br>
+                       System.out.println(romanNumeral + " = " + integerValue);<br>
+                   }<br>
+                   <br>
+                   private static int convertRomanToInt(String romanNumeral) <br>
+               {<br>
+                   Map<Character, Integer> romanNumeralValues = new HashMap<>();<br>
+                   romanNumeralValues.put('I', 1);<br>
+                   romanNumeralValues.put('V', 5);<br>
+                   romanNumeralValues.put('X', 10);<br>
+                   romanNumeralValues.put('L', 50);<br>
+                   romanNumeralValues.put('C', 100);<br>
+                   romanNumeralValues.put('D', 500);<br>
+                   romanNumeralValues.put('M', 1000);<br>
+                   int integerValue = 0;<br>
+                   for (int i = 0; i < romanNumeral.length(); i++)<br>
+                {<br>
+                       int currentRomanNumeralValue = romanNumeralValues.get(romanNumeral.charAt(i));<br>
+           
+                       if (i + 1 < romanNumeral.length() && currentRomanNumeralValue < romanNumeralValues.get(romanNumeral.charAt(i + 1)))<br>
+                   {<br>
+                           integerValue -= currentRomanNumeralValue;<br>
+                       }<br>
+                 else {<br>
+                           integerValue += currentRomanNumeralValue;<br>
+                       }<br>
+                   }<br>
+                   <br>
+                   return integerValue;<br>
+               }<br>
+           }<br>
+        </p>
+    </body>
+    </html>

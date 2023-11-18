@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            p{
+                color: white;
+                font-size: 25px; 
+                font-weight: bold; 
+                padding-left: 20px;
+             }
+        </style>
+    </head>
+    <body>
+        <p>
+
+        </p>
+    </body>
+</html>import java.util.Scanner;<br>
+<br>
+class Q {<br>
+    <br>
+ public static void main(String[] args)<br>
+    {<br>
+        Scanner in = new Scanner(System.in);<br>
+        System.out.print("Input a year: ");<br>
+        int year = in.nextInt();<br>
+        <br>
+        System.out.println(is_LeapYear(year));<br>
+    }<br>
+ 
+ public static boolean is_LeapYear(int y)<br>
+    {<br>
+        boolean a = (y % 4) == 0;<br>
+        boolean b = (y % 100) != 0;<br>
+        boolean c = ((y % 100 == 0) && (y % 400 == 0));<br>
+        <br>
+        return a && (b || c);<br>
+    }<br>
+}<br>

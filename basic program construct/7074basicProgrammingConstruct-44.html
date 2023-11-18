@@ -1,0 +1,36 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                // Factorial of a Number<br>
+                import java.util.Scanner;<br>
+                class Bpc44{<br>
+                    int fact(int x){<br>
+                        if(x==0){<br>
+                            return 1;<br>
+                        }<br>
+                         return x*(fact(x-1));<br>
+                    }<br>
+                }<br>
+                
+                class b{<br>
+                    public static void main(String str[]){<br>
+                    Bpc44 obj=new Bpc44();<br>
+                    Scanner sc=new Scanner(System.in);<br><br>
+                    System.out.println("Enter the Number : ");<br>
+                    int a=sc.nextInt();<br>
+                    System.out.println("Factorial of the Number is : "+ obj.fact(a));<br>
+                }<br>
+                }<br>
+            </p>
+        </body>
+    </html>

@@ -1,0 +1,41 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                // java program to find average of marks..  <br>
+                import java.util.Scanner;  <br>
+                class basic_programming_constructs_41  <br>
+                {  <br>
+                   public static void main(String args[])  <br>
+                   {  <br>
+                       // Declaring avriables..  <br>
+                        int mark[] = new int[5],i;  <br>
+                        float sum=0,avg;   <br>
+                       // Taking values from user...  <br>  <br>
+                        Scanner scan = new Scanner(System.in);  <br>
+                        System.out.print("Enter marks for 5   Subjects : ");  <br>
+                        for(i=0; i<5; i++)  <br>
+                        {  <br>
+                            mark[i] = scan.nextInt();  <br>
+                        // calculating sum  <br>
+                            sum = sum + mark[i];  <br>
+                        }  <br>
+                        // Finding avergae..  <br>
+                         avg= sum/5;  <br>
+                         <br>
+                        /// Printing the result...  <br>  <br>  <br>
+                    System.out.print("Average Marks = " +avg);  <br>
+                    }  <br>
+                }  <br>
+            </p>
+        </body>
+    </html>

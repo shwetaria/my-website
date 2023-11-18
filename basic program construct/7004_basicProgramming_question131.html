@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+			class a<br>
+			{<br>
+				public static void hcf(int a ,int b )<br>
+				{<br>
+					int i;<br>
+					i=a>b?a:b;<br>
+					for(;i>0;--i)<br>
+					{<br>
+						if(a%i==0&&b%i==0)<br>
+						{<br>
+							System.out.print("\nthe hcf of "+a+" and "+b+" is :- "+i);<br>
+								break;<br>
+						}<br>
+					}<br>
+					<br>
+				}<br>
+				public static void lcm(int a,int b)<br>
+				{<br>
+					int i;<br>
+					for(i=(a<b?b:a);i<=(a*b);i=i+(a<b?b:a))<br>
+					{<br>
+						if(i%a==0&&i%b==0)<br>
+						{<br>
+						 break;<br>
+						}<br>
+					}<br>
+					if(i%a==0&&i%b==0)<br>
+					{<br>
+						System.out.print("\nthe lcm of "+a+" and "+b+" is :- "+i);<br>
+					}<br>
+				}<br>
+				public static void main(String arr[])<br>
+				{<br><br>
+					int x,y;	<br>
+					java.util.Scanner s1=new java.util.Scanner(System.in);<br>
+					System.out.print("\nEnter 1st number :- ");<br>
+					x=s1.nextInt();<br>
+					System.out.print("\nEnter 2nd number :- ");<br>
+					y=s1.nextInt();<br>
+					hcf(x,y);<br>
+					lcm(x,y);<br>
+				}<br>
+			}<br>
+        </p>
+    </body>
+    </html>

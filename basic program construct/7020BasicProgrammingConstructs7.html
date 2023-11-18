@@ -1,0 +1,43 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+              import java.util.Scanner;<br>
+              class decimaltobinary<br>
+             {<br>
+               <br>
+                 public static void main(String[] args) {<br>
+                   <br><br>
+                     int rem,num;<br>
+                     String binaryNumber = "";<br>
+                     <br>
+                     Scanner input = new Scanner(System.in);<br>
+                     <br>
+                     System.out.print("Enter a Decimal Number : ");<br>
+                     <br>
+                     num = input.nextInt();<br>
+                     <br>
+                     while(num > 0){<br>
+                       <br>
+                       rem = num % 2;<br>
+                       <br>
+                       binaryNumber = rem + "" + binaryNumber;<br>
+                       <br>
+                       num =num / 2;<br>
+                     }<br>
+                     <br>
+                     System.out.println("Binary Number : "+binaryNumber);<br>
+                 }<br>
+             }<br>
+            </p>
+        </body>
+    </html>

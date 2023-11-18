@@ -1,0 +1,77 @@
+
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                class number<br>
+                {<br>
+                    public static void main(String arg[])throws java.io.IOException<br>
+                    {<br>
+                        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br>
+                        int positive=0;<br>
+                        int negative=0;<br>
+                        int zeros=0;<br>
+                        <br>
+                        // int num=1;<br>
+                        // System.out.println("Enter numbers, to quit enter any non-numeric character : ");<br>
+                        // while(true)<br>
+                        // {   try<br>
+                        //    {num= Integer.parseInt(input.readLine());}<br>
+                        //    catch(java.lang.NumberFormatException a)<br>
+                        //    {<br>
+                        //        break;<br>
+                        //    }<br>
+                        //     if(num<0)<br>
+                        //     negative ++;<br>
+                        //     else if (num>0)<br>
+                        //     positive++;<br>
+                        //     else<br>
+                        //     zeros++;<br>
+                        // }<br>
+                
+                
+                
+                        Double num;<br>
+                        String a="";<br>
+                        System.out.println("Enter numbers, to quit enter q : ");<br>
+                        while(true)<br>
+                        {   try<br>
+                           {<br>
+                               a=input.readLine();<br>
+                               num= Double.parseDouble(a); <br>
+                            }<br>
+                            catch(java.lang.NumberFormatException e)<br>
+                           {<br>
+                               if(a.equals("q"))<br>
+                               break;<br>
+                               else continue;<br>
+                           }<br>
+                            if(num<0)<br>
+                            negative ++;<br>
+                            else if (num>0)<br>
+                            positive++;<br>
+                            else<br>
+                            zeros++;<br>
+                        }<br>
+                
+                    System.out.println("The number of positive number were "+positive);<br>
+                    System.out.println("The number of negative number were "+negative);<br>
+                    System.out.println("The number of zeros were "+zeros);<br>
+                
+                
+                
+                
+                    }<br>
+                }<br>
+            </p>
+        </body>
+    </html>

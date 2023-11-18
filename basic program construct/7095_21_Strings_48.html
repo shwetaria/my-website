@@ -1,0 +1,38 @@
+<html>
+        <head>
+            <style>
+                p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+                class Strings_48<br>
+                {<br>
+                    public static void main(String args[])<br>
+                    {<br>
+                        String inputStr ="prepinsta";<br>
+                        boolean flag = true;<br>
+                        <br>
+                        for(char i :inputStr.toCharArray())<br>
+                        {<br>
+                            // if current character is the last occurrence in the string<br>
+                            if (inputStr.indexOf(i) == inputStr.lastIndexOf(i))<br>
+                            {<br>
+                                System.out.println("First non-repeating character is: "+ i);<br>
+                                flag = false;<br>
+                                break;<br>
+                            }<br>
+                        }<br>
+                
+                        if(flag)<br>
+                            System.out.println("There is no non repeating character in input string");<br>
+                    }<br>
+                }<br>
+            </p>
+        </body>
+    </html>

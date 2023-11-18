@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+			class a1<br>
+			{<br>
+				a1()<br>
+				{<br>
+					System.out.println<br>("\nObject is created");<br>
+				}<br>
+				public static void main(String brr[])<br>
+				{<br>
+					int number;<br>
+					java.util.Scanner s1= new java.util.Scanner(System.in);<br>
+					System.out.print("\nEnter the number ");<br>
+					number=s1.nextInt();<br>
+					int demo=number,reverse=0;<br>
+					while(demo>0)<br>
+					{<br>
+						int a=demo%10;<br>
+						reverse=reverse*10+a;<br>
+						demo=demo/10;<br>
+					}<br>
+					if(reverse==number)<br>
+					{<br>
+						System.out.print("\nthe given number "+number+" is pallindrome");<br>
+					} <br>
+					else<br>
+					{<br>
+						System.out.print("\nthe given number "+number+" is not pallindrome");<br>
+					}<br>
+				}<br>
+				<br>
+			}<br>
+        </p>
+    </body>
+    </html>

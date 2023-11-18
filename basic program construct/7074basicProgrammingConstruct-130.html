@@ -1,0 +1,48 @@
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+
+            </p>
+        </body>
+    </html>// Program to find Prime Number between 1-20 <br>
+import java.util.Scanner; <br>
+class Bpc130{ <br>
+    void prime(int s,int e){ <br>
+        for(int i=s;i<=e;i++){ <br>
+            int f=0; <br>
+            for(int j=2;j<=i/2;j++){ <br>
+            if(i%j==0){ <br>
+                ++f; <br>
+            } <br>
+        } <br>
+        if(i<=1){ <br>
+            ++f; <br>
+        } <br>
+         else if(f==0){ <br>
+            System.out.println(i); <br>
+        } <br>
+        }    <br>
+    } <br>
+} <br>
+class b{ <br>
+    public static void main(String str[]){ <br>
+    
+    Bpc130 obj=new Bpc130(); <br>
+    Scanner sc=new Scanner(System.in); <br>
+    System.out.println("Enter Start Number : "); <br>
+    int st=sc.nextInt(); <br>
+    System.out.println("Enter End Number : "); <br>
+    int end=sc.nextInt(); <br>
+    obj.prime(st,end); <br>
+    } <br>
+} <br>

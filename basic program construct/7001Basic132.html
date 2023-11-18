@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class oneHundredThirtyTwo {<br>
+                private static java.util.HashMap<Integer, Long> track = new java.util.HashMap<Integer, Long>();<br>
+            
+                static long fact(int n){<br>
+                    if(track.containsKey(n)) return track.get(n);<br>
+                    long result =  n*fact(n-1);<br>
+                    track.put(n, result);<br>
+                    return result;<br>
+                }<br>
+                public static void main(String[] args) throws java.io.IOException <br>{<br>
+                    int num = 0;<br>
+                    track.put(0, (long)1);<br>
+                    track.put(1, (long)1);<br>
+                    java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br>
+                    System.out.print("Enter a number: ");<br>
+                    try {<br>
+                        num = java.lang.Integer.parseInt(reader.readLine());<br>
+                        long ans = fact(num);<br>
+                        System.out.println("Factorial of " + num + " is " + ans);<br>
+                    } catch (java.lang.NumberFormatException e) {<br>
+                        System.out.println("Invalid input. Please enter a valid number.");<br>
+                    }<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

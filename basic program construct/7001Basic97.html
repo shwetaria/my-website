@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+			class ninty_seven{<br>
+				static void display(int[] arr){<br>
+					for(int i: arr)<br>
+						System.out.print(i + " ");<br>
+					System.out.println();<br>
+				}<br>
+				public static void main(String[] args){<br>
+					int  zero = 0;<br>
+					int[] arr = {0,1,1,1,0,0,1,0,0,1};<br>
+					System.out.print("Array before separation : ");<br>
+					display(arr);<br>
+					for(int i: arr){<br>
+						if(i==0) zero++;<br>
+					}<br>
+					for(int i=0; i<arr.length; i++){<br>
+						if(zero>0){<br>
+							arr[i] = 0;<br>
+							zero--;<br>
+						}<br>
+						else arr[i] = 1;<br>
+					}<br>
+					System.out.print("Array after separation : ");<br>
+					display(arr);<br>
+				}<br>
+			}<br>
+        </p>
+    </body>
+    </html>

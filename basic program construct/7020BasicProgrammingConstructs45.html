@@ -1,0 +1,35 @@
+
+<html>
+        <head>
+            <style>
+                  p{
+                    color: white;
+                    font-size: 25px; 
+                    font-weight: bold; 
+                    padding-left: 20px;
+                 }
+            </style>
+        </head>
+        <body>
+            <p>
+				import java.util.Scanner;<br>
+				class electricBill{<br>
+					void CalcBill(){<br>
+						System.out.println("Program to calculate Electricity Bill");<br>
+						Scanner scan = new Scanner(System.in);<br>
+						double rate, unit, total;<br>
+						System.out.print("Enter the rate per unit (in rupees) : ");<br>
+						rate = scan.nextInt();<br>
+						System.out.print("Enter the number of units consumed : ");<br>
+						unit = scan.nextInt();<br>
+						total = rate * unit;<br>
+						System.out.println("Total Electricity Bill is : " + total);<br>
+					}<br>
+					public static void main(String args[]){<br>
+						electricBill obj = new electricBill();<br>
+						obj.CalcBill();<br>
+					}<br>
+				}<br>
+            </p>
+        </body>
+    </html>

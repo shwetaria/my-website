@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+			class a1<br>
+			{<br>
+				a1()<br>
+				{<br>
+					System.out.println("\nObject is created");<br>
+				}<br>
+				public static void main(String brr[])<br>
+				{<br>
+					int count=0,totalsum=0,sumcube=1,demo,cube,number;<br>
+					for(int j=1;j<=600;j++)<br>
+					{<br>
+						number=j;<br>
+						demo=number;<br>
+						while(demo>0)<br>
+						{<br>
+							count++;<br>
+							demo=demo/10;<br>
+						}<br>
+						demo=number;<br>
+						while(demo>0)<br>
+						{<br>
+							cube=demo%10;<br>
+							for(int i=1;i<=count;i++)<br>
+							{<br>
+								sumcube=sumcube*cube;<br>
+							} <br>
+							totalsum=totalsum+sumcube;<br>
+							demo=demo/10;<br>
+							sumcube=1;<br>
+						}<br>
+						if(number==totalsum)<br>
+						{<br>
+							System.out.print("\nthe "+number+" will be armstrom number ");<br>
+						}<br>
+							totalsum=0;<br>
+							count=0;<br>
+					}<br>
+					<br>
+				}<br>
+				<br>
+			}<br>
+			
+        </p>
+    </body>
+    </html>
