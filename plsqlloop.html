@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+               p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+               margin-top: 30px; 
+            }
+            UL {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: left;
+                color: white;
+                list-style-type: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>LOOPS IN PL/SQL</h3>
+        <p>The PL/SQL loops are used to repeat the execution of one or more statements for specified number of times. These are also known as iterative control statements.</p>
+            <h2>Syntax OF EXIT LOOP :</h2>
+            <p style="border:4px #ffffff solid"><b>LOOP <br> 
+                Sequence of statements;<BR>
+                EXIT; <br>
+                 END LOOP;  <br></p>
+
+                 <ul>
+                    <li> TYPES OFLOOPS IN PLSQL<br>
+                        1.EXIT LOOP.
+                        1.WHILE LOOP.
+                        1.FOR LOOP.
+                        1.CURSOR FOR LOOP.
+
+                    </li>
+                 </ul>
+                <h2>Example :</h2>
+                <p style="border:4px white solid">DECLARE  <br>
+                    i number := 1;  <br>
+                 BEGIN  <br>
+                    loop<br>
+                    exit when i>10;<br>
+                    dbms_output.put_line?(i);<br>
+                    i:=i+1;<br>
+                    end loop;<br>
+                 END; <br>
+                    <b>
+                    </b></p>
+                    <h2>Output :</h2>
+        <img src="loop.svg" height="500px" width="700px" >
+        <br><br><br>
+    </body>
+</html>

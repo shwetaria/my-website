@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+                margin-top: 30px; 
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3><u>ROLLBACK COMMAND</u></h3>
+        
+        <p>The ROLLBACK command is the transactional command used to undo transactions that have not already been saved to the database. This command can only be used to undo transactions since the last COMMIT or ROLLBACK command was issued.</p>
+        <h2>Syntax :</h2>
+        <p style="border:4px white solid"><b> rollback;
+            </b></p>
+        <h2>Example :</h2>
+        <p style="border:4px white solid"> DELETE FROM CUSTOMERS
+            WHERE AGE = 25;
+         SQL> rollback;
+            <b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="rollback.png" height="500px" width="700px" >
+        <br><br><br>
+
+    </body>
+</html>

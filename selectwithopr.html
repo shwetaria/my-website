@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <style>
+               p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+                margin-top: 30px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h3><u>LOGICAL OPERATOR</u></h3>
+        <p>The SQL <b>AND</b>, <b>BETWEEN</b> ,<b>IN</b>&amp; <b>OR</b> operators are used to combine multiple conditions to narrow data in an SQL statement. These two operators are called as the conjunctive operators.</p>
+        <p>These operators provide a means to make multiple comparisons with different operators in the same SQL statement.</p>
+        <h2>The AND Operator</h2>
+        <p>The <b>AND</b> operator allows the existence of multiple conditions in an SQL statement's WHERE clause.</p>
+        <h3>Syntax :</h3>
+        <p style="border:4px white solid"><b>SELECT column1, column2, columnN 
+            FROM table_name
+            WHERE [condition1] AND [condition2]...AND [conditionN];</b></p>
+            <h2>Example :</h2>
+        <p style="border:4px white solid">  SELECT ID, NAME, SALARY 
+            FROM CUSTOMERS
+            WHERE SALARY > 2000 AND age < 25;<b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="andopr.jpg" height="500px" width="700px" >
+        <br><br><br>
+
+        <h2>The OR Operator</h2>
+        <p>The OR operator is used to combine multiple conditions in an SQL statement's WHERE clause.</p>
+        <h3>Syntax :</h3>
+        <p style="border:4px white solid"><b>SELECT column1, column2, columnN 
+            FROM table_name
+            WHERE [condition1] OR [condition2]...OR [conditionN]</b></p>
+            <h2>Example :</h2>
+        <p style="border:4px white solid">  SELECT ID, NAME, SALARY 
+            FROM CUSTOMERS
+            WHERE SALARY > 2000 OR age < 25;<b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="oropr.jpg" height="500px" width="700px" >
+        <br><br><br>
+
+        <h2>The BETWEEN Operator</h2>
+         <p>The SQL BETWEEN condition allows you to easily test if an expression is within a range of values (inclusive). The values can be text, date, or numbers. It can be used in a SELECT, INSERT, UPDATE, or DELETE statement. The SQL BETWEEN Condition will return the records where the expression is within the range of value1 and value2.</p>
+         <h3>Syntax :</h3>
+        <p style="border:4px white solid"><b>SELECT column_name(s)
+
+            FROM table_name
+            
+            WHERE column_name BETWEEN value1 AND value2;</b></p>
+            <h2>Example :</h2>
+        <p style="border:4px white solid">  SELECT ID, NAME, SALARY 
+            FROM CUSTOMERS
+            WHERE age between 20 and 25;<b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="betweenopr.jpg" height="500px" width="700px" >
+        <br><br><br>
+
+        <h2>The IN Operator</h2>
+         <p>IN operator allows you to easily test if the expression matches any value in the list of values. It is used to remove the need for multiple OR conditions in SELECT, INSERT, UPDATE, or DELETE. You can also use NOT IN to exclude the rows in your list. We should note that any kind of duplicate entry will be retained. </p>
+
+         <h3>Syntax :</h3>
+        <p style="border:4px white solid"><b>SELECT column_name(s)
+
+            FROM table_name
+            
+            WHERE column_name IN (list_of_values);</b></p>
+            <h2>Example :</h2>
+        <p style="border:4px white solid">  SELECT ID, NAME, SALARY 
+            FROM CUSTOMERS
+            WHERE age in (25,32);<b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="inopr.jpg" height="500px" width="700px" >
+        <br><br><br>
+
+        <h3><u>LIKE OPERATOR</u></h3>
+        <p>The SQL LIKE clause is used to compare a value to similar values using wildcard operators. There are two wildcards used in conjunction with the LIKE operator.</p>
+            <ul>
+                <li>
+                    The percent sign (%)
+                    The underscore (_)
+                </li>
+            </ul>
+            <p>The percent sign represents zero, one or multiple characters. The underscore represents a single number or character. These symbols can be used in combinations.</p>
+            <h3>Syntax of (%) :</h3>
+            <p style="border:4px white solid"><b>SELECT FROM table_name
+                WHERE column LIKE 'XXXX%'
+                </b></p>
+                <h2>Example :</h2>
+        <p style="border:4px white solid"> SELECT * FROM CUSTOMERS
+            WHERE NAME LIKE 'k%';<b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="like.jpg" height="500px" width="700px" >
+        <br><br><br>
+
+        <h3>Syntax of (_) :</h3>
+            <p style="border:4px white solid"><b>SELECT FROM table_name
+                WHERE column LIKE '_X%'
+                </b></p>
+                <h2>Example :</h2>
+        <p style="border:4px white solid"> SELECT * FROM CUSTOMERS
+            WHERE NAME LIKE '_a%';<b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="like2.jpg" height="500px" width="700px" >
+        <br><br><br>
+
+        
+
+
+    </body>
+</html>

@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <style>
+              p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+                margin-top: 30px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h3><u>CREATE COMMAND</u></h3>
+        <p>The SQL <b>CREATE DATABASE</b> statement is used to create a new SQL database. If you are creating your database on Linux or Unix, then database names are case-sensitive though SQL keywords are case-insensitive. If you are working on Windows then this restriction does not apply.Always the database name should be unique within the RDBMS.</p>
+        <h2>Syntax :</h2>
+        <p>The basic syntax of this CREATE DATABASE statement is as follows −</p>
+            <p style="border:4px white solid"><b>CREATE DATABASE DatabaseName;</b></p>
+            <h2>Example :</h2>
+            <p style="border:4px white solid"> <b> CREATE DATABASE bca;</b></p>
+            <h2>Output :</h2>
+            <img src="createdba.jpg" height="500px" width="700px" >
+            
+            <br><br><br>
+
+            <h2>To <u>see</u> an existing databases we use :-</h2>
+            <p style="border:4px white solid"> <b> SHOW DATABASES;</b></p>
+            <h2>Output :</h2>
+            <img src="createdb.jpg" height="500px" width="700px" >
+            
+            <br><br><br>
+
+
+            <h2>To <u>use</u> an existing databases we use :-</h2>
+            <p style="border:4px white solid"> <b> USE DATABASE NAME;</b></p>
+            <h2>Output :</h2>
+            <img src="usecommand.jpg" height="500px" width="700px" ><br><br><br>
+
+
+
+
+            <h3><u>TO CREATE TABLE</u></h3>
+            <p>The SQL <b>CREATE TABLE</b> statement is used to create a new table.</p>
+            <p>Creating a basic table involves naming the table and defining its columns and each column's data type.</p>
+            <h2>Syntax :</h2>
+            <p style="border:4px white solid"><b> CREATE TABLE table_name (
+                column1 datatype,
+                column2 datatype,
+                column3 datatype,
+               ....
+            );</b></p>
+            <h2>Example :</h2>
+            <p style="border:4px white solid"> <b>create table student(rollno numeric,stdname varchar(20),class varchar(20), phoneno numeric);</b></p>
+            <h2>Output :</h2>
+            <img src="createtable.jpg" height="500px" width="700px" ><br><br>
+              <br><br>
+              <h2>Query to create table using another table.</h2> 
+              <h2>Syntax :</h2>
+              <p style="border:4px white solid">CREATE TABLE new_table_name AS
+                SELECT column1, column2,...
+                FROM existing_table_name
+                WHERE ....;<b> 
+              </b></p>
+              <h2>Example :</h2>
+              <p style="border:4px white solid"> <b>create table students2 as select name, rollno from student;</b></p>
+              <h2>Output :</h2>
+              <img src="createtable2.jpg" height="500px" width="700px" ><br><br>
+                <br><br>           
+
+                <h2>Query to create table using <u>not null</u> constraint.</h2> 
+              <h2>Syntax :</h2>
+              <p style="border:4px white solid">CREATE TABLE Persons (
+                ID int NOT NULL,
+                LastName varchar(255) NOT NULL,
+                FirstName varchar(255) NOT NULL,
+                Age int
+              );<b><br> 
+              </b></p>
+              <h2>Example :</h2>
+              <p style="border:4px white solid"> <b>CREATE TABLE Persons (
+                ID int NOT NULL,
+                LastName varchar(255) NOT NULL,
+                FirstName varchar(255) NOT NULL,
+                Age int
+            );</b></p>
+              <h2>Output :</h2>
+              <img src="notnll.jpg" height="500px" width="700px" ><br><br>
+                <br><br><br>
+                
+                <h2>Query to create table using <u>primary key</u> constraint.</h2> 
+              <h2>Syntax :</h2>
+              <p style="border:4px white solid">CREATE TABLE employee (
+                ID int NOT NULL,
+                LastName varchar(255) NOT NULL,
+                FirstName varchar(255),
+                Age int,
+                PRIMARY KEY (ID)
+            );
+              <b><br> 
+              </b></p>
+              <h2>Example :</h2>
+              <p style="border:4px white solid"> <b>CREATE TABLE employee (
+                ID int NOT NULL,
+                LastName varchar(255) NOT NULL,
+                FirstName varchar(255),
+                Age int,
+                PRIMARY KEY (ID)
+            );</b></p>
+              <h2>Output :</h2>
+              <img src="pk.png" height="500px" width="700px" ><br><br>
+                <br><br> <br>
+                
+                <h2>Query to create table using <u>foreign key</u> constraint.</h2> 
+                <h2>Syntax :</h2>
+                <p style="border:4px white solid">CREATE TABLE Orders (
+                    OrderID int NOT NULL,
+                    OrderNumber int NOT NULL,
+                    PersonID int,
+                    PRIMARY KEY (OrderID),
+                    FOREIGN KEY (PersonID) REFERENCES employee(ID)
+                );
+                <b><br> 
+                </b></p>
+                <h2>Example :</h2>
+                <p style="border:4px white solid"> <b>CREATE TABLE Orders (
+                    OrderID int NOT NULL,
+                    OrderNumber int NOT NULL,
+                    PersonID int,
+                    PRIMARY KEY (OrderID),
+                    FOREIGN KEY (PersonID) REFERENCES employee(ID)
+                );</b></p>
+                <h2>Output :</h2>
+                <img src="fk.png" height="500px" width="700px" ><br><br>
+                  <br><br>          
+
+    </body>
+</html>

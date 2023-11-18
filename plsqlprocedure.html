@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+               margin-top: 30px; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h3> PROCEDURES IN PL/SQL</h3>
+        <p>The PL/SQL stored procedure or simply a procedure is a PL/SQL block which performs one or more specific tasks. It is just like procedures in other programming languages.</p>
+        <br><br>
+        <h2>Example :</h2>
+        <p>table creation</p>
+        <p style="border:4px white solid">
+            create table user(id number(10) primary key,name varchar2(100));</p>
+            <br><br>
+            <p>procedure code</p>
+            <p style="border:4px white solid">
+                create or replace procedure "INSERTUSER" <br>  
+                (id IN NUMBER,    <br>
+                name IN VARCHAR2)    <br>
+                is    <br>
+                begin    <br>
+                insert into user values(id,name);<br>    
+                end;    <br></p>
+                <h2>Output :</h2>
+                <p>Procedure created.</p>
+                <br><br>
+    </body>
+</html>

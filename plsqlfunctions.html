@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+               margin-top: 30px; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h3> FUNCTIONS IN PL/SQL</h3>
+        <p>The PL/SQL Function is very similar to PL/SQL Procedure. The main difference between procedure and a function is, a function must always return a value, and on the other hand a procedure may or may not return a value. Except this, all the other things of PL/SQL procedure are true for PL/SQL function too.</p>
+        <br><br>
+
+        <h2>Syntax OF FUNCTION:</h2>
+        <p style="border:4px #ffffff solid"><b>CREATE [OR REPLACE] FUNCTION function_name [parameters]<br>  
+            [(parameter_name [IN | OUT | IN OUT] type [, ...])]  <br>
+            RETURN return_datatype  <br>
+            {IS | AS}  <br>
+            BEGIN  <br>
+               < function_body >  <br>
+            END [function_name];      <br></p><br>
+        <h2>Example :</h2>
+        
+        <p style="border:4px white solid">create or replace function(n1 in number,n2 in number)<br>
+            return number<br>
+            is<br>
+            n3 number(8);<br>
+            begin<br>
+            n3:=n1+n2;<br>
+            return n3;<br>
+            end;<br>
+            </p>
+            <br><br>
+            
+            
+                <h2>Output :</h2>
+                <p>Addition is: 33<br>
+                    Statement processed.<br>
+                    0.05 seconds<br></p>
+                <br><br>
+    </body>
+</html>

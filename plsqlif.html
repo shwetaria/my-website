@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+               p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+                margin-top: 30px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h3>IF IN PL/SQL</h3>
+        <p>PL/SQL supports the programming language features like conditional statements and iterative statements. Its programming constructs are similar to how you use in programming languages like Java and C++.</p>
+            <h2>Syntax :  (IF-THEN STATEMENT)</h2>
+            <p style="border:4px white solid"><b> IF condition <br>  
+                THEN   <br>
+                Statement: {It is executed when condition is true}  <br>
+                END IF;<br></p><br>
+
+                <h2>Syntax :  (IF-THEN-ELSE STATEMENT)</h2>
+            <p style="border:4px white solid"><b> IF condition  <br> 
+                THEN  <br>
+                   {...statements to execute when condition is TRUE...} <br> 
+                ELSE  <br>
+                   {...statements to execute when condition is FALSE...}<br>  
+                END IF;  <br></p><br>
+
+                <h2>Syntax :  (IF-THEN-ELSEIF STATEMENT)</h2>
+            <p style="border:4px white solid"><b> IF condition1 <br>
+                THEN  <br>
+                   {...statements to execute when condition1 is TRUE...}<br>  
+                ELSIF condition2   <br>
+                THEN  <br>
+                   {...statements to execute when condition2 is TRUE...} <br> 
+                END IF; <br></p><br>
+
+                <h2>Syntax :  (IF-THEN-ELSEIF-ELSE STATEMENT)</h2>
+            <p style="border:4px white solid"><b> IF condition1  <br> 
+                THEN  <br>
+                   {...statements to execute when condition1 is TRUE...}  <br>
+                ELSIF condition2   <br>
+                THEN  <br>
+                   {...statements to execute when condition2 is TRUE...} <br> 
+                ELSE  <br>
+                   {...statements to execute when both condition1 and condition2 are FALSE...} <br> 
+                END IF;   <br></p><br>
+
+                <h2>Example :</h2>
+                <p style="border:4px white solid">DECLARE<br>
+                    num number(3):=50;<br>
+                    if(num < 20)then<br>
+                    dbms.output.put_line('num is less than 20');<br>
+                    
+                    else<br>
+                    dbms.output.put_line('num is not less than 20');<br>
+                    end if<br>
+                    dbms.output.put_line('value of num is:||num')
+                    end;<br>
+                    <b>
+                    </b></p>
+                    <h2>Output :</h2>
+        <img src="plsqlif.svg" height="500px" width="700px" >
+        <br><br><br>
+    </body>
+</html>

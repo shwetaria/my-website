@@ -1,0 +1,210 @@
+<html>
+    <head>
+        <style>
+             p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+                margin-top: 30px; 
+            }
+            .ria{
+                color: white;
+                font-size: 25px;
+            }
+            li{
+    font-size: 30px;
+    color: rgb(241, 244, 248);
+    font-weight: bolder;
+}
+UL{
+    color: white;
+    font-size: 25px;
+    list-style-type: none;
+}
+        </style>
+    </head>
+    <body>
+        <h2>What is an Operator in SQL?</h2>
+        <p>An operator is a reserved word or a character used primarily in an SQL statement's WHERE clause to perform operation(s), such as comparisons and arithmetic operations. These Operators are used to specify conditions in an SQL statement and to serve as conjunctions for multiple conditions in a statement.</p>
+        <ul class="list">
+            <li>1.Arithmetic operators</li>
+            <li>2.Comparison operators</li>
+            <li>3.Logical operators</li>
+            </ul><br>
+            <h2>SQL Arithmetic Operators</h2>
+            <p>Assume <b>'variable a'</b> holds 10 and <b>'variable b'</b> holds 20, then −</p><br>
+            <table border="2" class="ria">
+                <tbody><tr>
+                <th style="width:23%; text-align:center;">Operator</th>
+                <th style="width:50%; text-align:center;">Description</th>
+                <th style="text-align:center;">Example</th>
+                </tr>
+                <tr>
+                <td style="vertical-align:middle;">+ (Addition)</td>
+                <td>Adds values on either side of the operator.</td>
+                <td style="vertical-align:middle;"> a + b will give 30</td>
+                </tr>
+                <tr>
+                <td style="vertical-align:middle;">- (Subtraction)</td>
+                <td>Subtracts right hand operand from left hand operand.</td>
+                <td style="vertical-align:middle;">a - b will give -10</td>
+                </tr>
+                <tr>
+                <td style="vertical-align:middle;">* (Multiplication)</td>
+                <td>Multiplies values on either side of the operator.</td>
+                <td style="vertical-align:middle;">a * b will give 200</td>
+                </tr>
+                <tr>
+                <td style="vertical-align:middle;">/ (Division)</td>
+                <td>Divides left hand operand by right hand operand.</td>
+                <td style="vertical-align:middle;">b / a will give 2</td>
+                </tr>
+                <tr>
+                <td style="vertical-align:middle;">% (Modulus)</td>
+                <td>Divides left hand operand by right hand operand and returns remainder.</td>
+                <td style="vertical-align:middle;">b % a will give 0</td>
+                </tr>
+                </tbody></table>
+
+                <h2>SQL Comparison Operators</h2>
+                <p>Assume <b>'variable a'</b> holds 10 and <b>'variable b'</b> holds 20, then −</p><br>
+                <table  border="2" class="ria">
+                    <tbody><tr>
+                    <th style="width:15%">Operator</th>
+                    <th style="width:60%">Description</th>
+                    <th>Example</th>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">=</td>
+                    <td> Checks if the values of two operands are equal or not, if yes then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a = b) is not true.</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">!=</td>
+                    <td> Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a != b) is true.</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">&lt;&gt;</td>
+                    <td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a &lt;&gt; b) is true.</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">&gt;</td>
+                    <td> Checks if the value of left  operand is greater than the value of right operand, if yes then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a &gt; b) is not true.</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">&lt;</td>
+                    <td> Checks if the value of left  operand is less than the value of right operand, if yes then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a &lt; b) is true.</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">&gt;=</td>
+                    <td> Checks if the value of left  operand is greater than or equal to the value of right operand, if yes then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a &gt;= b) is not true.</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">&lt;=</td>
+                    <td> Checks if the value of left  operand is less than or equal to the value of right operand, if yes then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a &lt;= b) is true.</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">!&lt;</td>
+                    <td> Checks if the value of left  operand is not less than the value of right operand, if yes then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a !&lt; b) is false.</td>
+                    </tr>
+                    <tr>
+                    <td style="text-align:center; vertical-align:middle;">!&gt;</td>
+                    <td> Checks if the value of left  operand is not greater than the value of right operand, if yes then condition becomes true.</td>
+                    <td style="vertical-align:middle;">(a !&gt; b) is true.</td>
+                    </tr>
+                    </tbody></table>
+
+                    <h2>SQL Logical Operators</h2>
+                    <p>Here is a list of all the logical operators available in SQL.</p><br>
+                    <table border="2" class="ria">
+                        <tbody><tr>
+                        <th>Sr.No.</th>
+                        <th style="text-align:center;">Operator &amp; Description</th>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">1</td>
+                        <td>
+                        <p><b>ALL</b></p>
+                        <p>The ALL operator is used to compare a value to all values in another value set.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">2</td>
+                        <td>
+                        <p><b>AND</b></p>
+                        <p>The AND operator allows the existence of multiple conditions in an SQL statement's WHERE clause.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">3</td>
+                        <td><p><b>ANY</b></p>
+                        <p>The ANY operator is used to compare a value to any applicable value in the list as per the condition.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">4</td>
+                        <td>
+                        <p><b>BETWEEN</b></p>
+                        <p>The BETWEEN operator is used to search for values that are within a set of values, given the minimum value and the maximum value.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">5</td>
+                        <td>
+                        <p><b>EXISTS</b></p>
+                        <p>The EXISTS operator is used to search for the presence of a row in a specified table that meets a certain criterion.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">6</td>
+                        <td>
+                        <p><b>IN</b></p>
+                        <p>The IN operator is used to compare a value to a list of literal values that have been specified.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">7</td>
+                        <td>
+                        <p><b>LIKE</b></p>
+                        <p>The LIKE operator is used to compare a value to similar values using wildcard operators.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">8</td>
+                        <td>
+                        <p><b>NOT</b></p>
+                        <p>The NOT operator reverses the meaning of the logical operator with which it is used. Eg: NOT EXISTS, NOT BETWEEN, NOT IN, etc. <b>This is a negate operator.</b></p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">9</td>
+                        <td><p><b>OR</b></p>
+                        <p>The OR operator is used to combine multiple conditions in an SQL statement's WHERE clause.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">10</td>
+                        <td><p><b>IS NULL</b></p>
+                        <p>The NULL operator is used to compare a value with a NULL value.</p></td>
+                        </tr>
+                        <tr>
+                        <td style="text-align:center; vertical-align:middle;">11</td>
+                        <td>
+                        <p><b>UNIQUE</b></p>
+                        <p>The UNIQUE operator searches every row of a specified table for uniqueness (no duplicates).</p></td>
+                        </tr>
+                        </tbody></table>
+    </body>
+</html>

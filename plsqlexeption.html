@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+            p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+               margin-top: 30px; 
+            }
+            UL {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: left;
+                color: white;
+                list-style-type: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h3> FUNCTIONS IN PL/SQL</h3>
+        <p>An error occurs during the program execution is called Exception in PL/SQL.</p>
+        <p>PL/SQL facilitates programmers to catch such conditions using exception block in the program and an appropriate action is taken against the error condition.</p>
+        <ul>
+            <li> YWO TYPES OF EXEPTION HANDLING IN PLSQL<br>
+                1. System-defined Exceptions
+                2.User-defined Exceptions
+               
+
+            </li>
+         </ul>
+        <br><br>
+
+        <h2>Syntax OF EXEPTION HANDLING :</h2>
+        <p style="border:4px #ffffff solid"><b> DECLARE  <br>
+            <declarations section> <br>
+         BEGIN  <br>
+            <executable command(s)><br>  
+         EXCEPTION  <br>
+            <exception handling goes here ><br>  
+            WHEN exception1 THEN   <br>
+                exception1-handling-statements><br>   
+            WHEN exception2  THEN  <br>
+               exception2-handling-statements <br>  
+            WHEN exception3 THEN   <br>
+               exception3-handling-statements<br>  
+            ........  <br>
+            WHEN others THEN<br>  
+               exception3-handling-statements<br>  
+         END;  </b><br></p><br>
+        <h2>Example :</h2>
+        
+        <img src="exeption.svg" height="500px" width="700px" >
+            <br><br>
+            
+            
+                <h2>Output :</h2>
+                <p>No such Person!<br>
+                    PL/SQL procedure successfully completed.<br></p>
+                <br><br>
+    </body>
+</html>

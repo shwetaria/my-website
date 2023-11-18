@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+               p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+               margin-top: 30px; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h3> WHILE LOOP IN PL/SQL</h3>
+        <p>PL/SQL while loop is used when a set of statements has to be executed as long as a condition is true, the While loop is used. The condition is decided at the beginning of each iteration and continues until the condition becomes false.</p>
+            <h2>Syntax OF WHILE LOOP :</h2>
+            <p style="border:4px #ffffff solid"><b>WHILE <condition> <br>  
+                LOOP statements;   <br>
+                END LOOP; <br></p>
+
+                 
+                <h2>Example :</h2>
+                <p style="border:4px white solid">DECLARE  <br>
+                    var1 number; <br>
+                    var2 number;<br>
+                 BEGIN  <br>
+                 var1:=200;<br>
+                 var2:=1;<br>
+                 while(var2<=10)
+                    loop<br>
+                    
+                    dbms_output.put_line?(var1*var2);<br>
+                    var2:=var2+1;<br>
+                    end loop;<br>
+                 END; <br>
+                    <b>
+                    </b></p>
+                    <h2>Output :</h2>
+        <img src="while.svg" height="500px" width="700px" >
+        <br><br><br>
+    </body>
+</html>

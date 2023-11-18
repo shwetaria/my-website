@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+             p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+                margin-top: 30px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h3><u>ALTER COMMAND</u></h3>
+        <p>The SQL <b>ALTER TABLE</b> command is used to add, delete or modify columns in an existing table. You should also use the ALTER TABLE command to add and drop various constraints on an existing table.</p>
+        <h2>Syntax FOR DROPPING COLUNM:</h2>
+        
+        <p style="border:4px white solid"><b> ALTER TABLE table_name
+            DROP COLUMN column_name;
+            </b></p>
+        <h2>Example :</h2>
+        <p style="border:4px white solid">  ALTER TABLE employee
+            DROP COLUMN Email;
+            <b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="ALTERDROP.png" height="500px" width="700px" >
+        <br><br><br>
+
+        <h2>Syntax FOR ADDING COLUNM:</h2>
+        
+        <p style="border:4px white solid"><b> ALTER TABLE table_name
+            ADD column_name datatype;
+            
+            </b></p>
+        <h2>Example :</h2>
+        <p style="border:4px white solid">ALTER TABLE employee
+            ADD Email varchar(255);
+              
+            <b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="ALTERADD.png" height="500px" width="700px" >
+        <br><br><br>
+
+        <h2>Syntax FOR RENAME COLUNM:</h2>
+        
+        <p style="border:4px white solid"><b>ALTER TABLE table_name
+            RENAME COLUMN old_name to new_name;
+             
+            
+            </b></p>
+        <h2>Example :</h2>
+        <p style="border:4px white solid">alter table employee
+            rename column id to emp_id;
+              
+            <b>
+            </b></p>
+        <h2>Output :</h2>
+        <img src="ALTERRN.png" height="500px" width="700px" >
+        <br><br><br>
+    </body>
+</html>

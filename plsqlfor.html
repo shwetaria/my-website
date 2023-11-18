@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+               p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+               margin-top: 30px; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h3> FOR LOOP IN PL/SQL</h3>
+        <p>PL/SQL for loop is used when when you want to execute a set of statements for a predetermined number of times. The loop is iterated between the start and end integer values. The counter is always incremented by 1 and once the counter reaches the value of end integer, the loop ends</p>
+            <h2>Syntax OF FORLOOP :</h2>
+            <p style="border:4px #ffffff solid"><b>FOR counter IN initial_value .. final_value LOOP<br> 
+                LOOP statements;   <br>
+                END LOOP;    <br></p>
+
+                 
+                <h2>Example :</h2>
+                <p style="border:4px white solid">
+                 BEGIN  <br>
+                 for k in 1..10 loop<br>
+                    dbms_output.put_line(k);<br>
+                    end loop;<br>
+                 END; <br>
+                    <b>
+                    </b></p>
+                    <h2>Output :</h2>
+        <img src="fot.svg" height="500px" width="700px" >
+        <br><br><br>
+    </body>
+</html>

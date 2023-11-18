@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+               p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+                margin-top: 30px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h3>VARIABLES IN PL/SQL</h3>
+        <p>A variable is a meaningful name which facilitates a programmer to store data temporarily during the execution of code. It helps you to manipulate data in PL/SQL programs. It is nothing except a name given to a storage area. Each variable in the PL/SQL has a specific data type which defines the size and layout of the variable's memory.
+
+            A variable should not exceed 30 characters. Its letter optionally followed by more letters, dollar signs, numerals, underscore etc.</p>
+            <h2>Syntax :</h2>
+            <p style="border:4px white solid"><b>variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value]  </p>
+                <h2>Example :</h2>
+                <p style="border:4px white solid">DECLARE  <br>
+                    a integer := 30;  <br>
+                    b integer := 40;  <br>
+                    c integer;  <br>
+                    f real;  <br>
+                 BEGIN  <br>
+                    c := a + b;<br>  
+                    dbms_output.put_line('Value of c: ' || c);<br>  
+                    f := 100.0/3.0;  <br>
+                    dbms_output.put_line('Value of f: ' || f);<br>  
+                 END; <br>
+                    <b>
+                    </b></p>
+                    <h2>Output :</h2>
+        <img src="plvar.png" height="500px" width="700px" >
+        <br><br><br>
+    </body>
+</html>
