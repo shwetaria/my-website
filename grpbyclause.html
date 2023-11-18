@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+             p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+                margin-top: 30px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h3><u>GROUP BY CLAUSE</u></h3>
+        <p>The SQL <b>GROUP BY</b> clause is used in collaboration with the SELECT statement to arrange identical data into groups. This GROUP BY clause follows the WHERE clause in a SELECT statement and precedes the ORDER BY clause.</p>
+        <h2>Syntax :</h2>
+        <p style="border:4px white solid"><b>SELECT column1, column2
+            FROM table_name
+            WHERE [ conditions ]
+            GROUP BY column1, column2
+            ORDER BY column1, column2;</b></p>
+        <h2>Example :</h2>
+        <p style="border:4px white solid"> <b>SELECT NAME, SUM(SALARY) FROM CUSTOMERS
+            GROUP BY NAME;</b></p>
+        <h2>Output :</h2>
+        <img src="grpby.png" height="400px" width="600px" >
+    </body>
+</html>

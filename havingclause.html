@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+             p{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 25px;
+                text-align: center;
+                color: white;
+            }
+            H3{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align: center;
+                margin-top: 30px; 
+            }
+            h2{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 35px; 
+                color: white;
+               text-align:left;
+               margin-top: 30px; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <body> <br>
+            <h3>HAVING BY CLAUSE</h3>
+           <p> <br>
+            MySQL HAVING Clause is used with GROUP BY clause. It always returns the rows where condition is TRUE. <br>
+    <br></p>
+            <h3>SYNTAX</h3>
+            <br>
+                      
+            <p>SELECT expression1, expression2, ... expression_n,   <br>
+            aggregate_function (expression)  <br>
+            FROM tables  <br>
+            [WHERE conditions]  
+            GROUP BY expression1, expression2, ... expression_n  <br>
+            HAVING condition; <br>
+            <br>
+            <b>Parameters</b>
+            <br>
+           <b> Aggregate_function: </b> It specifies any one of the aggregate function such as SUM, COUNT, MIN, MAX, or AVG. <br>
+            <br>
+           <b> expression1, expression2, ... expression_n: </b> It specifies the expressions that are not encapsulated within an aggregate function and must be included in the GROUP BY clause. <br>
+            <br>
+          <b>  WHERE conditions: </b> It is optional. It specifies the conditions for the records to be selected.
+            <br> <br>
+           <b>HAVING condition: </b> It is used to restrict the groups of returned rows. It shows only those groups in result set whose conditions are TRUE.
+    <br></p>    
+    
+    
+    <h2>Output :</h2>
+    <img src="having.PNG" height="500px" width="700px" >
+    </body>
+</html>

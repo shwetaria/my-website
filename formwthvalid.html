@@ -1,0 +1,41 @@
+<html>
+<body>
+    <form>
+        Name <input type="text" name="name1" id="txt1"><br><br>
+        Password <input type="password" name="psswrd" id="txt2"><br><br>
+        Choose gender:
+        Male <input type="radio" name="gender" id="txt3"><br><br><div></div>
+        Female <input type="radio" name="gender" id="txt4"><br><br>
+        Age <input type="numbe" name="nobr" id="txt5"><br><br>
+        <input type="submit" onclick="result();"><br><br>
+    </form>
+</body> 
+<script>
+function result(){
+    var name=doument.getElementById("txt1").value;
+    if(name==""){
+    alert("enter the name");
+    }
+     var password=document.getElementById("txt2").value;
+     if(password.lenth<6){
+    alert("password must be of atleast 6 characters");
+    }
+    else if(password.lenth>10){
+        alert("password must be of only 10 characters");
+    }
+    var male=document.getElementById("txt3").value;
+    var female=document.getElementById("txt4").value;
+    if(male.checked==false&& female.checked==false){
+        alert("selectthe gender before submit");
+    }
+      var age=document.getElementById("txt5").value;
+      if("age<=18"){
+          alert(" your age must be greater than 18");
+      }
+      else if("age>=35"){
+          alert("your age must be less than 35");
+      }
+}
+
+</script>
+</html>
