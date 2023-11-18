@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class ShareResources {<br>
+                /*Topic :Multithreds <br>
+                prog.no 12. Create the program to create multiple threads, show an example of notify, notifyall, wait, resume, sleep methods.
+                    */ <br>
+                    
+                    private int value;<br>
+                    private boolean isP;<br>
+                    <br>
+                    public synchronized void P(int newV) {<br>
+                        while (isP) {<br>
+                            try {<br>
+                                wait();<br>
+                            } catch (InterruptedException e) {<br>
+                                Thread.currentThread().interrupt();<br>
+                            }<br>
+                        }<br>
+                        value = newV;<br>
+                        System.out.println("Your thread is processing: " + value);
+                        isP = true;<br>
+                        notify();<br>
+                    }<br>
+                    <br>
+                    public synchronized void C(int newV) {<br>
+                        while (!isP) { // Change isP to !isP<br>
+                            try {<br>
+                                wait();<br><br>
+                            } catch (InterruptedException e) {<br>
+                                Thread.currentThread().interrupt();<br>
+                            }<br>
+                        }<br>
+                        value = newV;<br>
+                        System.out.println("Your thread is processing: " + value);<br>
+                        isP = false;<br>
+                        notify();<br>
+                    }<br>
+                }<br>
+                <br>
+                class P implements Runnable {<br>
+                    private ShareResources sR;<br>
+                    <br>
+                    public P(ShareResources sR) {<br>
+                        this.sR = sR;<br>
+                    }<br>
+                    <br>
+                    @Override<br>
+                    public void run() {<br>
+                        for (int i = 1; i <= 5; i++) {<br>
+                            sR.P(i);<br>
+                            try {<br>
+                                Thread.sleep(1000);<br>
+                            } catch (InterruptedException e) {<br>
+                                Thread.currentThread().interrupt();<br>
+                            }<br>
+                        }<br>
+                    }<br>
+                }<br>
+                
+                class C implements Runnable {<br>
+                    private ShareResources sR;<br>
+                    <br>
+                    public C(ShareResources sR) {<br>
+                        this.sR = sR;<br>
+                    }<br>
+                
+                    @Override<br>
+                    public void run() {<br>
+                        for (int i = 1; i <= 5; i++) {<br>
+                            sR.C(i); // Change sR.P(i) to sR.C(i)<br>
+                            try {<br>
+                                Thread.sleep(1000);<br>
+                            } catch (InterruptedException e) {<br>
+                                Thread.currentThread().interrupt();<br>
+                            }<br>
+                        }<br>
+                    }<br>
+                }<br>
+                
+                public class Multithread7104prog12 {<br>
+                    public static void main(String[] args) {<br>
+                        ShareResources sR = new ShareResources();<br>
+                        <br>
+                        Thread proc = new Thread(new P(sR));<br>
+                        Thread cons = new Thread(new C(sR));<br>
+                        <br>
+                        proc.start();<br>
+                        cons.start();<br>
+                    }<br>
+                }<br>
+                
+        </p>
+    </body>
+    </html>

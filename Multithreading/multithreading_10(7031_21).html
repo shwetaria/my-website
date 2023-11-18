@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class MyThread extends Thread {<br>
+                public MyThread(String name, int priority) {<br>
+                    super(name);<br>
+                    setPriority(priority);<br>
+                }<br>
+                <br>
+                public void run() {<br>
+                    System.out.println("Thread: " + getName() + ", Priority: " + getPriority() + " is running.");<br>
+                }<br>
+            }<br>
+            
+            public class ThreadExample {<br>
+                public static void main(String[] args) {<br>
+                    MyThread thread1 = new MyThread("Thread1", Thread.MAX_PRIORITY);<br>
+                    MyThread thread2 = new MyThread("Thread2", Thread.NORM_PRIORITY);<br>
+                    MyThread thread3 = new MyThread("Thread3", Thread.MIN_PRIORITY);<br>
+                    <br>
+                    thread1.start();<br>
+                    thread2.start();<br>
+                    thread3.start();<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>

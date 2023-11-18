@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+			/ Java Program to illustrate Multithreading Approach
+
+			class Bank {<br>
+			int total = 100;<br>
+			void withdrawn(String name, int withdrawal){<br>
+			if (total >= withdrawal) {<br>
+			System.out.println(name + " withdrawn "+ withdrawal);<br>
+			total = total - withdrawal;<br>
+			System.out.println(total);<br>
+			try {<br><br>
+			Thread.sleep(1000);<br>
+			}<br>
+			catch (InterruptedException e) {<br>
+			e.printStackTrace();}}<br>
+			else {<br>
+			System.out.println(name+ " you can not withdraw "+ withdrawal);<br>
+			System.out.println("your balance is: " + total);<br><br>
+			try {<br>
+			Thread.sleep(1000);<br><br>
+			catch (InterruptedException e) {<br>
+			e.printStackTrace();}<br>
+			}}<br>
+			void deposit(String name, int deposit){<br>
+			System.out.println(name + " deposited " + deposit);<br>
+			total = total + deposit;<br>
+			System.out.println("Balance after deposit: "+ total);<br>
+			try {<br>
+			Thread.sleep(1000);<br>
+			}<br>
+			catch (InterruptedException e) {<br>
+			e.printStackTrace();}<br><br>
+			}}<br>
+			<br>
+			class ThreadWithdrawal extends Thread {<br>
+				<br>
+				Bank object;<br>
+				String name;<br>
+				int dollar;<br>
+			
+				ThreadWithdrawal(Bank ob, String name, int money)<br>
+				{<br>
+					this.object = ob;<br>
+					this.name = name;<br>
+					this.dollar = money;<br>
+				}<br>
+				<br>
+				public void run() { object.withdrawn(name, dollar); }<br>
+			}<br>
+			<br>
+			class ThreadDeposit extends Thread {<br>
+				<br>
+				Bank object;<br>
+				String name;<br>
+				int dollar;<br>
+				ThreadDeposit(Bank ob, String name, int money)<br>
+				{<br>
+					this.object = ob;<br>
+					this.name = name;<br>
+					this.dollar = money;<br>
+				}<br>
+			
+				public void run() { object.deposit(name, dollar); }<br>
+			}<br>
+			<br>
+			
+			class main1 {<br>
+			
+				public static void main(String[] args)<br><br>
+				{<br>
+					<br><br>
+					Bank obj = new Bank();<br>
+			
+					ThreadWithdrawal t1 = new ThreadWithdrawal(obj, "Arnab", 20);<br>
+					ThreadWithdrawal t2 = new ThreadWithdrawal(obj, "Mandeep", 40);<br>
+					ThreadDeposit t3 = new ThreadDeposit(obj, "Mukta", 35);<br>
+					ThreadWithdrawal t4 = new ThreadWithdrawal(obj, "Rinku", 80);<br>
+					ThreadWithdrawal t5 = new ThreadWithdrawal(obj, "Shubham", 40);<br>
+			
+					t1.start();<br>
+					t2.start();<br>
+					t3.start();<br>
+					t4.start();<br>
+					t5.start();<br>
+				}<br><br>
+			}<br>
+			
+        </p>
+    </body>
+    </html>/

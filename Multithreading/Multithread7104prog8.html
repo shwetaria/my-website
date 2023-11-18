@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class prog8 {<br>
+                /*<br>
+                 * Topic = Multithread<br>
+                 * prog.no 8 Create the program to create multiple threads by using Runnbale<br>
+                 * interface<br>
+                 */<br>
+                public static void main(String[] args) throws java.lang.ClassNotFoundException {<br>
+            
+                    Runnable r1 = new MyRun("This is Thread 1");<br>
+                    Runnable r2 = new MyRun("This isThread 2");<br>
+                    Runnable r3 = new MyRun("This isThread 3");<br>
+                    <br>
+                    Thread t1 = new Thread(r1);<br>
+                    Thread t2 = new Thread(r2);<br>
+                    Thread t3 = new Thread(r3);<br>
+                    <br>
+                    t1.start();<br>
+                    t2.start();<br>
+                    t3.start();<br>
+                }<br>
+                <br>
+                @Override<br>
+                public String toString() {<br>
+                    return "prog1 []";<br>
+                }<br>
+            }<br>
+            <br>
+            class MyRun implements Runnable {<br>
+                private String tn;<br>
+                <br>
+                public MyRun(String name) {<br>
+                    this.tn = name;<br>
+                }<br>
+                <br>
+                @Override<br>
+                public void run() {<br>
+                    for (int i = 1; i <= 5; i++) {<br>
+                        System.out.println(tn + " - Count is start: " + i);<br>
+                        try {<br>
+                            Thread.sleep(1000);<br>
+                        } catch (InterruptedException e) {<br>
+                            Thread.currentThread().interrupt();<br>
+                        }<br>
+                    }<br>
+                    System.out.println(tn + " now running  has finished.");<br>
+                }<br>
+            }
+            
+        </p>
+    </body>
+    </html>

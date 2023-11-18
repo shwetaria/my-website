@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            // Calculate sum of prime numbers up to a given limit using multiple threads
+            class MyThread extends Thread {<br>
+                private int start, end;<br>
+                private int sum = 0;<br>
+                <br>
+                MyThread(int start, int end) {<br>
+                    this.start = start;<br>
+                    this.end = end;<br>
+                }<br>
+                <br>
+                public void run() {<br>
+                    System.out.println("My thread is running");<br>
+                    for (int i = start; i <= end; i++) {<br>
+                        if (isPrime(i))<br>
+                            sum += i;<br>
+                    }<br><br>
+                }<br>
+                <br>
+                boolean isPrime(int n) {<br><br>
+                    if (n == 0 || n == 1)<br>
+                        return false;<br>
+                    for (int i = 2; i <= Math.sqrt(n); ++i) {<br>
+                        if (n % i == 0)<br>
+                            return false;<br>
+                    }<br>
+                    return true;<br>
+                }<br>
+                <br>
+                public int getSum() {<br>
+                    return sum;<br>
+                }<br>
+            }<br>
+            <br>
+            class SumOfPrimes {<br><br>
+                MyThread[] myThreads;<br>
+                private int sum = 0;<br>
+                private int limit = 20;<br>
+                private static int threadCount = 4;<br>
+                <br>
+                // Constructor to initialize the array of threads<br>
+                public SumOfPrimes(int n) throws InterruptedException {<br>
+                    this.myThreads = new MyThread[n];<br>
+                    for (int i = 0; i < n; i++) {<br>
+                        int start = ((limit * i) / n);<br>
+                        int end = (i == n-1) ? limit : ((limit * (i+1))/n) - 1;<br>
+                        myThreads[i] = new MyThread(start, end);<br>
+                    }<br>
+                }<br>
+                <br>
+                // Function to start all threads<br>
+                public void startAll() throws InterruptedException {<br>
+                    for (int i = 0; i < myThreads.length; i++) {<br>
+                        myThreads[i].start();<br>
+                        myThreads[i].join();<br>
+                    }<br>
+                }<br>
+            
+                public void getSum() {<br>
+                    for (int i = 0; i < myThreads.length; i++) {<br>
+                        this.sum += myThreads[i].getSum();<br>
+                    }<br>
+                }<br>
+                
+                public static void main(String[] args) {<br>
+                    try {<br>
+                        SumOfPrimes mt = new SumOfPrimes(threadCount);<br>
+                        mt.startAll();<br>
+                        mt.getSum();<br>
+                        System.out.println("Sum of prime numbers is " + mt.sum);<br>
+                    } catch (InterruptedException e) {<br>
+                        System.err.print("Error: " + e);<br>
+                    }<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

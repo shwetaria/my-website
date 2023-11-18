@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.util.concurrent.ExecutorService;<br>
+            import java.util.concurrent.Executors;<br>
+            import java.util.concurrent.TimeUnit;<br>
+            <br>
+            public class MatrixMultiplication {<br>
+                <br>
+                private static final int MATRIX_SIZE = 3; <br>
+                private static final int NUM_THREADS = 3; <br>
+            
+                private static int[][] resultMatrix = new int[MATRIX_SIZE][MATRIX_SIZE];<br>
+                private static int[][] matrixA = new int[MATRIX_SIZE][MATRIX_SIZE];<br>
+                private static int[][] matrixB = new int[MATRIX_SIZE][MATRIX_SIZE];<br>
+            
+                public static void main(String[] args) {<br>
+                    initializeMatrix(matrixA);<br>
+                    initializeMatrix(matrixB);<br>
+            
+                    System.out.println("Matrix A:");<br>
+                    printMatrix(matrixA);<br>
+            
+                    System.out.println("\nMatrix B:");<br>
+                    printMatrix(matrixB);<br>
+            
+                    ExecutorService executor = Executors.newFixedThreadPool(NUM_THREADS);<br>
+                    <br>
+                    for (int i = 0; i < MATRIX_SIZE; i++) {<br>
+                        executor.execute(new MatrixMultiplier(i))<br>
+                        <br>
+                    executor.shutdown();<br>
+                    <br>
+                    try {<br>
+                        executor.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);<br>
+                    } catch (InterruptedException e) {<br>
+                        e.printStackTrace();<br>
+                    }<br>
+            
+                    System.out.println("\nResult Matrix:");<br>
+                    printMatrix(resultMatrix);<br>
+                }<br>
+                <br>
+                private static void initializeMatrix(int[][] matrix) {<br>
+                    for (int i = 0; i < MATRIX_SIZE; i++) {<br>
+                        for (int j = 0; j < MATRIX_SIZE; j++) {<br><br>
+                            matrix[i][j] = (int) (Math.random() * 10);<br>
+                        }<br>
+                    }<br>
+                }<br>
+                <br>
+                private static void printMatrix(int[][] matrix) {<br>
+                    for (int i = 0; i < MATRIX_SIZE; i++) {<br>
+                        for (int j = 0; j < MATRIX_SIZE; j++) {<br>
+                            System.out.print(matrix[i][j] + " ");<br>
+                        }<br>
+                        System.out.println();<br>
+                    }<br>
+                }<br>
+            
+                private static class MatrixMultiplier implements Runnable {<br>
+                    private final int row;<br>
+                    <br>
+                    public MatrixMultiplier(int row) {<br>
+                        this.row = row;<br>
+                    }<br>
+                    <br>
+                    @Override<br>
+                    public void run() {<br>
+                        for (int col = 0; col < MATRIX_SIZE; col++) {<br>
+                            for (int k = 0; k < MATRIX_SIZE; k++) {<br>
+                                resultMatrix[row][col] += matrixA[row][k] * matrixB[k][col];<br>
+                            }<br>
+                        }<br><br>
+                    }<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>

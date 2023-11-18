@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /* Write a Java Program that sorts an array of integers using multiple threads. */
+
+            import java.util.Arrays;<br>
+            
+            class ParallelMergeSort {<br>
+            
+                private final int[] array;<br>
+            
+                private ParallelMergeSort(int[] array) {<br>
+                    this.array = array;<br>
+                }<br>
+            
+                private void merge(int low, int mid, int high) {<br>
+                    int[] left = Arrays.copyOfRange(array, low, mid + 1);<br>
+                    int[] right = Arrays.copyOfRange(array, mid + 1, high + 1);<br>
+                    <br>
+                    int i = 0, j = 0, k = low;<br>
+            
+                    while (i < left.length && j < right.length) {<br>
+                        if (left[i] <= right[j]) {<br>
+                            array[k++] = left[i++];<br>
+                        } else {<br>
+                            array[k++] = right[j++];<br>
+                        }<br>
+                    }<br>
+            
+                    while (i < left.length) {<br>
+                        array[k++] = left[i++];<br>
+                    }<br>
+                    <br>
+                    while (j < right.length) {<br>
+                        array[k++] = right[j++];<br>
+                    }<br><br>
+                }<br>
+                <br><br>
+                private void mergeSort(int low, int high) {<br>
+                    if (low < high) {<br>
+                        int mid = (low + high) / 2;<br>
+            
+                        Thread leftThread = new Thread(() -> mergeSort(low, mid));<br>
+                        Thread rightThread = new Thread(() -> mergeSort(mid + 1, high));<br>
+                        <br>
+                        leftThread.start();<br>
+                        rightThread.start();<br>
+                        <br>
+                        try {<br>
+                            leftThread.join();<br>
+                            rightThread.join();<br>
+                        } catch (InterruptedException e) {<br>
+                            e.printStackTrace();<br>
+                        }<br>
+            
+                        merge(low, mid, high);<br>
+                    }<br>
+                }<br>
+            
+                private static void parallelMergeSort(int[] array) {<br>
+                    ParallelMergeSort sorter = new ParallelMergeSort(array);<br>
+                    sorter.mergeSort(0, array.length - 1);<br>
+                }<br>
+                <br>
+                public static void main(String[] args) {<br>
+                    int[] arr = {12, 4, 7, 3, 9, 5, 2, 1, 6, 11, 8, 10};<br>
+                    <br>
+                    System.out.println("Array before sorting: " + Arrays.toString(arr));
+                    <br>
+                    parallelMergeSort(arr);<br>
+                    <br>
+                    System.out.println("Array after sorting: " + Arrays.toString(arr));<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>
