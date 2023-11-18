@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+          // A class to represent a bank<br>
+          class Bank {<br>
+            // A list of accounts in the bank<br>
+            private java.util.List<Account> accounts;<br>
+              <br>
+            // A constructor to initialize the list<br>
+            public Bank() {<br>
+              accounts = new java.util.ArrayList<Account>();<br>
+            }<br>
+            <br>
+            // A method to add an account to the bank<br>
+            public void addAccount(Account account) {<br>
+              accounts.add(account);<br>
+            }<br>
+            <br>
+            // A method to display the details of all accounts<br>
+            public void displayAccounts() {<br>
+              for (Account account : accounts) {<br>
+                System.out.println(account);<br>
+              }<br>
+            }<br>
+          }<br>
+          <br>
+          // An interface to represent an account<br>
+          interface Account {<br>
+            // A method to deposit money into the account<br>
+            public void deposit(double amount);<br>
+            <br>
+            // A method to withdraw money from the account<br>
+            public void withdraw(double amount);<br>
+            <br>
+            // A method to calculate the interest on the account<br>
+            public double calculateInterest();<br>
+            <br>
+            // A method to view the balance of the account<br>
+            public double getBalance();<br>
+            <br>
+            // A method to display the details of the account<br>
+            public String toString();<br>
+          }<br><br>
+          // A class to represent a savings account<br>
+          class SavingsAccount implements Account {<br>
+            // A constant to store the interest rate<br>
+            private static final double INTEREST_RATE = 0.05;<br>
+            <br>
+            // A variable to store the account number<br>
+            private int accountNumber;<br>
+            <br>
+            // A variable to store the balance of the account<br>
+            private double balance;<br>
+            <br>
+            // A constructor to initialize the account number and balance<br>
+            public SavingsAccount(int accountNumber, double balance) {<br>
+              this.accountNumber = accountNumber;<br>
+              this.balance = balance;<br>
+            }<br>
+            // A method to deposit money into the account<br>
+            public void deposit(double amount) {<br>
+              balance += amount;<br>
+            }<br>
+            <br>
+            // A method to withdraw money from the account<br>
+            public void withdraw(double amount) {<br>
+              if (balance >= amount) {<br>
+                balance -= amount;<br>
+              } else {<br>
+                System.out.println("Insufficient funds");<br>
+              }<br>
+            }<br>
+          
+            // A method to calculate the interest on the account<br>
+            public double calculateInterest() {<br>
+              return balance * INTEREST_RATE;<br>
+            }<br>
+            <br>
+            // A method to view the balance of the account<br>
+            public double getBalance() {<br>
+              return balance;<br>
+            }<br>
+            <br>
+            // A method to display the details of the account<br>
+            public String toString() {<br>
+              return "SavingsAccount[accountNumber=" + accountNumber + ", balance=" + balance + "]";<br>
+            }<br>
+          }<br>
+          <br>
+          // A class to represent a current account<br>
+          class CurrentAccount implements Account {<br>
+            // A constant to store the overdraft limit<br>
+            private static final double OVERDRAFT_LIMIT = 1000;<br>
+            <br>
+            // A variable to store the account number<br>
+            private int accountNumber;<br>
+            <br>
+            // A variable to store the balance of the account<br>
+            private double balance;<br><br>
+            <br>
+            // A constructor to initialize the account number and balance<br>
+            public CurrentAccount(int accountNumber, double balance) {<br>
+              this.accountNumber = accountNumber;<br>
+              this.balance = balance;<br>
+            }<br>
+          
+            // A method to deposit money into the account<br><br>
+            public void deposit(double amount) {<br>
+              balance += amount;<br>
+            }<br>
+          
+            // A method to withdraw money from the account<br>
+            public void withdraw(double amount) {<br>
+              if (balance + OVERDRAFT_LIMIT >= amount) {<br>
+                balance -= amount;<br>
+              } else {<br>
+                System.out.println("Overdraft limit exceeded");<br>
+              }<br>
+            }<br>
+          
+            // A method to calculate the interest on the account<br>
+            public double calculateInterest() {<br>
+              return 0; // No interest for current account<br>
+            }<br>
+            <br>
+            // A method to view the balance of the account<br>
+            public double getBalance() {<br>
+              return balance;<br>
+            }<br>
+          
+            // A method to display the details of the account<br>
+            public String toString() {<br>
+              return "CurrentAccount[accountNumber=" + accountNumber + ", balance=" + balance + "]";<br>
+            }<br>
+          }<br>
+          <br>
+          // A class to test the program<br>
+          class Test {<br>
+            public static void main(String[] args) {<br>
+              // Create a bank object<br>
+              Bank bank = new Bank();<br>
+              <br>
+              // Create some account objects<br>
+              Account a1 = new SavingsAccount(101, 5000);<br>
+              Account a2 = new CurrentAccount(102, 3000);<br>
+              Account a3 = new SavingsAccount(103, 7000);<br>
+              Account a4 = new CurrentAccount(104, 4000);<br>
+              <br>
+              // Add the accounts to the bank<br>
+              bank.addAccount(a1);<br>
+              bank.addAccount(a2);<br>
+              bank.addAccount(a3);<br>
+              bank.addAccount(a4);<br>
+          
+              // Display the details of all accounts<br>
+              bank.displayAccounts();<br>
+              <br>
+              // Deposit some money into a1<br>
+              a1.deposit(1000);<br>
+              <br>
+              // Withdraw some money from a2<br>
+              a2.withdraw(2000);<br>
+              <br>
+              // Calculate the interest for a3<br><br>
+              System.out.println("Interest for a3: " + a3.calculateInterest());<br>
+              <br>
+              // Display the balance of a4<br>
+              System.out.println("Balance of a4: " + a4.getBalance());<br>
+              <br>
+              // Display the details of all accounts again<br>
+              bank.displayAccounts();<br>
+            }<br>
+          }<br>
+          
+        </p>
+    </body>
+    </html>

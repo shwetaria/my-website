@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            // Write a Java program to create an interface Searchable with a method search(String keyword) that searches for a given keyword in a text document. Create two classes Document and WebPage that implement the Searchable interface and provide their own implementations of the search() method. (Program 9)
+            // Created by Aryan , Rollno 7070
+            // Note : In order to compile and run this program , rename it from "7070Interface9.java" to "Interface9.java"
+            
+            // Interface Searchable<br>
+            interface Searchable {<br>
+                void search(String keyword);<br>
+            }<br>
+            <br>
+            // Class Document implementing Searchable<br>
+            class Document implements Searchable {<br>
+                private String content;<br>
+                <br>
+                // Constructor for Document<br>
+                public Document(String content) {<br>
+                    this.content = content;<br>
+                }<br>
+                <br>
+                // Implementation of the search method for Document<br>
+                @Override<br>
+                public void search(String keyword) {<br>
+                    if (content.contains(keyword)) {<br>
+                        System.out.println("Keyword '" + keyword + "' found in the document.");<br>
+                    } else {<br>
+                        System.out.println("Keyword '" + keyword + "' not found in the document.");<br>
+                    }<br>
+                }<br>
+            }<br>
+            <br>
+            // Class WebPage implementing Searchable<br>
+            class WebPage implements Searchable {<br>
+                private String url;<br>
+                private String htmlContent;<br>
+                <br>
+                // Constructor for WebPage<br>
+                public WebPage(String url, String htmlContent) {<br>
+                    this.url = url;<br>
+                    this.htmlContent = htmlContent;<br>
+                }<br>
+                <br>
+                // Implementation of the search method for WebPage<br>
+                @Override<br>
+                public void search(String keyword) {<br>
+                    if (htmlContent.contains(keyword)) {<br>
+                        System.out.println("Keyword '" + keyword + "' found on the web page at " + url + ".");<br>
+                    } else {<br>
+                        System.out.println("Keyword '" + keyword + "' not found on the web page at " + url + ".");<br>
+                    }<br>
+                }<br>
+            }<br>
+            
+            // Main class for testing<br>
+            public class Interface9 {<br>
+                public static void main(String[] args) {<br>
+                    // Create instances of Document and WebPage<br>
+                    Document document = new Document("This is a sample document. Java is a programming language.");<br>
+                    WebPage webPage = new WebPage("http://example.com", "<html><body>Java programming on the web page</body></html>");<br>
+                    <br>
+                    // Test the search method for Document<br>
+                    System.out.println("Searching in the document:");<br>
+                    document.search("Java");<br>
+                    document.search("Python");<br>
+                    System.out.println();<br>
+                    <br>
+                    // Test the search method for WebPage<br>
+                    System.out.println("Searching on the web page:");<br>
+                    webPage.search("Java");<br>
+                    webPage.search("JavaScript");<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>

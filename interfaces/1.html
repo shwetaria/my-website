@@ -1,0 +1,84 @@
+
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            // Shape interface<br>
+            interface Shape {<br>
+                double getArea();<br>
+            }<br>
+            <br>
+            // Rectangle class implementing Shape<br>
+            class Rectangle implements Shape {<br>
+                private double length;<br>
+                private double width;<br>
+                <br>
+                public Rectangle(double length, double width) {<br>
+                    this.length = length;<br>
+                    this.width = width;<br>
+                }<br>
+                <br>
+                @Override<br>
+                public double getArea() {<br>
+                    return length * width;<br>
+                }<br>
+            }<br>
+            
+            // Circle class implementing Shape<br>
+            class Circle implements Shape {<br>
+                private double radius;<br>
+                <br>
+                public Circle(double radius) {<br>
+                    this.radius = radius;<br>
+                }<br>
+                <br>
+                @Override<br>
+                public double getArea() {<br>
+                    return Math.PI * radius * radius;<br>
+                }<br>
+            }<br>
+            
+            // Triangle class implementing Shape<br>
+            class Triangle implements Shape {<br>
+                private double base;<br>
+                private double height;<br>
+                <br>
+                public Triangle(double base, double height) {<br>
+                    this.base = base;<br>
+                    this.height = height;<br>
+                }<br>
+                <br>
+                @Override<br>
+                public double getArea() {<br>
+                    return 0.5 * base * height;<br>
+                }<br>
+            }<br>
+            
+            // Main class to test the Shape interface and its implementations<br>
+             class ShapeTest {<br>
+                public static void main(String[] args) {<br>
+                    // Test Rectangle<br>
+                    Rectangle rectangle = new Rectangle(5, 8);<br>
+                    System.out.println("Area of Rectangle: " + rectangle.getArea());<br>
+                    <br>
+                    // Test Circle<br>
+                    Circle circle = new Circle(4);<br>
+                    System.out.println("Area of Circle: " + circle.getArea());<br>
+                    <br>
+                    // Test Triangle<br>
+                    Triangle triangle = new Triangle(6, 10);<br>
+                    System.out.println("Area of Triangle: " + triangle.getArea());<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

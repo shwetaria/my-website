@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            interface Sortable {<br>
+                void sort(int[] arr);<br>
+            }<br>
+            <br>
+            class BubbleSort implements Sortable {<br>
+                @Override<br>
+                public void sort(int[] arr) {<br>
+                    int n = arr.length;<br>
+                    boolean swapped;<br>
+                    for (int i = 0; i < n - 1; i++) {<br>
+                        swapped = false;<br>
+                        for (int j = 0; j < n - i - 1; j++) {<br>
+                            if (arr[j] > arr[j + 1]) {<br>
+                                // Swap arr[j] and arr[j+1]<br>
+                                int temp = arr[j];<br>
+                                arr[j] = arr[j + 1];<br>
+                                arr[j + 1] = temp;<br>
+                                swapped = true;<br>
+                            }<br>
+                        }<br>
+                        // If no two elements were swapped in inner loop, the array is already sorted<br>
+                        if (!swapped) {<br>
+                            break;<br>
+                        }<br>
+                    }<br>
+                }<br>
+            }<br>
+            
+            class SelectionSort implements Sortable {<br>
+                @Override<br>
+                public void sort(int[] arr) {<br>
+                    int n = arr.length;<br>
+                    for (int i = 0; i < n - 1; i++) {<br>
+                        int minIndex = i;<br>
+                        for (int j = i + 1; j < n; j++) {<br>
+                            if (arr[j] < arr[minIndex]) {<br>
+                                minIndex = j;<br>
+                            }<br>
+                        }<br>
+                        // Swap the found minimum element with the first element<br>
+                        int temp = arr[i];<br>
+                        arr[i] = arr[minIndex];<br>
+                        arr[minIndex] = temp;<br>
+                    }<br>
+                }<br>
+            }<br>
+            
+            public class SortExample {<br>
+                public static void main(String[] args) {<br>
+                    int[] arr = {64, 34, 25, 12, 22, 11, 90};<br>
+                    <br>
+                    Sortable bubbleSort = new BubbleSort();<br>
+                    bubbleSort.sort(arr);<br>
+                    System.out.println("Sorted using Bubble Sort: " + java.util.Arrays.toString(arr));<br>
+                    <br>
+                    int[] arr2 = {64, 34, 25, 12, 22, 11, 90};<br>
+                    <br>
+                    Sortable selectionSort = new SelectionSort();<br>
+                    selectionSort.sort(arr2);<br>
+                    System.out.println("Sorted using Selection Sort: " + java.util.Arrays.toString(arr2));<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>

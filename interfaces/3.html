@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            // Flyable interface<br>
+            interface Flyable {<br>
+                void fly_obj();<br>
+            }<br><br>
+            <br>
+            // Spacecraft class implementing Flyable interface<br>
+            class Spacecraft implements Flyable {<br>
+                @Override<br>
+                public void fly_obj() {<br>
+                    System.out.println("Spacecraft is flying in space.");<br>
+                }<br>
+            }<br>
+            <br>
+            // Airplane class implementing Flyable interface<br>
+            class Airplane implements Flyable {<br>
+                @Override<br>
+                public void fly_obj() {<br>
+                    System.out.println("Airplane is flying in the sky.");<br>
+                }<br>
+            }<br>
+            <br>
+            // Helicopter class implementing Flyable interface<br>
+            class Helicopter implements Flyable {<br>
+                @Override<br>
+                public void fly_obj() {<br>
+                    System.out.println("Helicopter is flying in the air.");<br>
+                }<br>
+            }<br>
+            <br>
+            class fly{<br>
+                public static void main(String[] args) {<br>
+                    // Create objects of each class and call fly_obj() method<br>
+                    Spacecraft sc = new Spacecraft();<br>
+                    Airplane ap = new Airplane();<br>
+                    Helicopter hc = new Helicopter();<br>
+                    <br>
+                    // Call fly_obj() method for each object<br>
+                    sc.fly_obj();<br>
+                    ap.fly_obj();<br>
+                    hc.fly_obj();<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>

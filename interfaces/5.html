@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            interface Resizable {<br>
+                <br>
+                void resizeWidth(int width);<br>
+                <br>
+              void resizeHeight(int height);<br>
+            }<br>
+            <br>
+            class Rectangle implements Resizable {<br>
+                <br>
+                private int width;<br>
+                private int height;<br>
+                <br>
+                public Rectangle(int width, int height) {<br>
+                    this.width = width;<br>
+                    this.height = height;<br>
+                }<br>
+                <br>
+                public void resizeWidth(int width) {<br>
+                    this.width = width;<br>
+                }<br>
+                <br>
+               
+                public void resizeHeight(int height) {<br>
+                    this.height = height;<br>
+                }<br>
+                <br>
+                public void printSize() {<br>
+                    System.out.println("Width: " + width + ", Height: " + height);<br>
+                }<br>
+            }<br>
+            
+            
+             class Final_size {<br>
+                public static void main(String s[] ) {<br>
+                    <br>
+                    Rectangle r = new Rectangle(50, 30);<br>
+                    <br>
+                    r.printSize();<br>
+            
+                    <br>
+                    r.resizeWidth(80);<br>
+                    r.resizeHeight(40);<br>
+                    r.printSize();<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>
