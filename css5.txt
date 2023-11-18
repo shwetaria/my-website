@@ -1,0 +1,35 @@
+<html>
+<head>
+    <style>
+        p{
+            font-weight: bolder;
+            font-size: 28px;
+        }
+        div{
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+        }
+        .div1{
+            background-color: red;
+            margin-left: 840px;
+        }
+         .div2{
+            background-color: darkviolet;
+            margin-left: 730px;
+        }
+        .div3{
+            background-color: pink;
+            margin-left: 620px;
+        }
+    </style>
+   </head> 
+<body>
+    <p>OUTPUT</p>
+       <div>
+           <div class="div1"></div>
+           <div class="div2"></div>
+           <div class="div3"></div>
+       </div> 
+</body>
+</html>

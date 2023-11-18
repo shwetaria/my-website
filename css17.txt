@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+           *{
+               margin: 0;
+               padding: 0;
+           }
+            .header{
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(216,50,50);
+                text-align: center;
+                padding: 20px;
+            }
+            h2{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+        <h2>Heading</h2>
+        <h4>Lorem ipsum dolor sit amet consectetur adipisicing alit. Quia,quos</h4>
+    </div>
+    </body>
+</html>

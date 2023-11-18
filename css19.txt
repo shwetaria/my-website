@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(252, 203, 211);
+            }
+            div{
+                padding-left: 3px;
+                margin-top: 3px;
+                background-color: darkviolet;
+                padding-right: 150px;
+            }
+            h1{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            p{
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .p1{
+                display: inline;
+                padding: 2px;
+                margin-left: 300px;
+                font-size: 25px;
+                border: 2px solid white;
+                border-radius: 50px 50px 50px 50px;
+            }
+            </style>
+    </head>
+    <body>
+        <div>
+            <h3>Project - Branding</h3>
+            <h1>MAKE IT LIVE</h1>
+            <P>-Lorem ispum, dolor sit amet consectetur
+                <br> adipisicing elit. Cconsequuntur perferendis,alias
+                <br> quibusdam ratione ea cum id <i>Laudantium
+                <br>accusantiam tempore,numquam dicta,tenetur
+                <br>ispam!</i> </P>
+                <br><br>
+                <p class="p1">$37</p>
+        </div>
+    </body>
+</html>
