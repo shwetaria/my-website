@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.sql.*;<br>
+            import java.util.Scanner;<br>
+            
+            class DatabaseManager {<br>
+                public static void main(String[] args) throws ClassNotFoundException {
+                   Class.forName("com.mysql.cj.jdbc.Driver");<br>
+                    try {<br><br>
+                        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/chatTest", "root", "");<br>
+                        System.out.println("Connection successfully");<br>
+                        Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);<br>
+                        ResultSet result = st.executeQuery("select * from chats");<br>
+                        <br>
+                        try{<br>
+                            while(result.next()){<br>
+                                System.out.println("Id = "+result.getInt("id")+ ", username = " + result.getString("username") + ", message = " + result.getString("message"));<br>
+                            }<br>
+                        } catch(NumberFormatException e){<br>
+                            System.out.println("Exception: " + e.getMessage());<br>
+                        }<br>
+                        connection.close();<br>
+                    } catch (SQLException e) {<br>
+                        System.out.println("SQL Exception: " + e.getMessage());<br>
+                    } catch (Exception e){<br><br>
+                        System.out.println("Exception: " + e.getMessage());<br>
+                    }<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>
+

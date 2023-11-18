@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.sql.Connection; <br>
+            import java.sql.DriverManager; <br>
+            import java.sql.SQLException; <br>
+            <br>
+            class MySQLConnectionExample { <br>
+                public static void main(String[] args) { <br>
+                    String url = "jdbc:mysql://localhost:3306/test"; <br>
+                    String user = "root"; <br>
+                    String password = ""; <br>
+                    <br>
+                    try { <br>
+                        Class.forName("com.mysql.cj.jdbc.Driver"); <br>
+                        Connection connection = DriverManager.getConnection(url, user, password); <br>
+                        <br>
+                        if (connection != null) { <br>
+                            System.out.println("Connected to the MySQL database"); <br>
+                            connection.close(); <br>
+                        } <br>
+                    } catch (ClassNotFoundException e) { <br>
+                        System.err.println("MySQL JDBC driver not found"); <br>
+                    } catch (SQLException e) { <br>
+                        System.err.println("Connection to the database failed: " + e.getMessage()); <br>
+                    } <br>
+                } <br>
+            } <br>
+            <br>
+        </p>
+    </body>
+</html>

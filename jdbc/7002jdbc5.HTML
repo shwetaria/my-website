@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.sql.Connection;  <br>
+            import java.sql.DriverManager;  <br>
+            import java.sql.Statement;  <br>
+            import java.sql.SQLException;  <br>
+            import java.sql.ResultSet;  <br>
+            
+            class Main {  <br>
+                private static Connection con;  <br>
+                private static int rows_affected;  <br>
+                <br>
+                public static void main(String[] args) {  <br>
+                    <br>
+                    try{  <br>
+                        Class.forName("com.mysql.cj.jdbc.Driver");  <br>
+                        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");<br>
+                        <br>
+                        Statement st = con.createStatement(ResultSet.TYPE_FORWARD_ONLY,ResultSet.CONCUR_UPDATABLE);<br>
+                        String sql = "DELETE FROM students";  <br>
+                        <br>
+                        rows_affected = st.executeUpdate(sql);  <br>
+                        System.out.println("Numbers of rows deleted : "+rows_affected);<br>
+                        <br>
+                        //telling user that he is deleting from an empty table.<br>
+                        ResultSet rs =  st.executeQuery("SELECT * FROM students");<br>
+                        if(!rs.next())  <br><br>
+                        System.out.println("--------   Hey User, Your table is empty.  --------");<br>
+                    }  <br>
+                    catch(ClassNotFoundException c)  <br>
+                    {  <br>
+                        c.printStackTrace();  <br>  
+                    }  <br>
+                    catch(SQLException s)  <br>
+                    {  <br>
+                        s.printStackTrace();  <br>  
+                    }<br>
+            
+                    if(con!=null) {<br>
+                        try {<br>
+                            con.close();<br>
+                        }<br>
+                        catch(SQLException sql_e) {<br>
+                            sql_e.printStackTrace();<br>
+                        }<br>
+                    }<br><br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>
+

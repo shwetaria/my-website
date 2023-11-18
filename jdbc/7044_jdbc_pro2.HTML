@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>            
+            class DataDefination {<br>
+                public static void main(String[] args) {<br>
+                    try {<br>
+                        <br>
+                        Class.forName("com.mysql.cj.jdbc.Driver");<br>
+                        <br>
+                        java.sql.Connection connect = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/test",<br>
+                                "root", "");<br>
+                                <br>
+                        if (connect.isClosed()) {<br>
+                            System.out.println(" Your Connection is Closed!");<br>
+                            System.exit(0);<br>
+                        }<br>
+            
+                        // ------------------------------------------------------
+            
+                        System.out.println(" Your Connection is Establised ");<br>
+            
+                        java.sql.Statement state = connect.createStatement();<br>
+            
+                        String create_table_query = "CREATE Table mytable3 (id int)";<br>
+            
+                        Boolean result = state.execute(create_table_query);<br>
+                        <br>
+                        if (result) {<br>
+                            System.out.println("Table created!");<br>
+                        }<br>
+                        // -----------------------------------------------------
+                        <br>
+                        connect.close();<br>
+            
+                        if (connect.isClosed())<br>
+                            System.out.println(" Successfully Connection is Closed!");<br>
+                    } catch (ClassNotFoundException error) {<br>
+                        System.out.print(error.getMessage());<br>
+                    } catch (java.sql.SQLException error) {<br>
+                        System.out.print(error.getMessage());<br>
+                    }<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+</html>

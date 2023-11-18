@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.sql.*;  <br>
+            import java.util.Scanner;  <br>
+            
+            class ScrollableResultSetExample {  <br>
+                public static void main(String[] args) {  <br>
+                    String url = "jdbc:mysql://local  host:3306/chatTest";  <br>
+                    String username = "root";  <br>
+                    String password   <br>
+                    <br>
+                    try {  <br>
+                        Connection connection = DriverManager.getConnection(url, username, password);  <br>
+                        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);  <br>
+                        <br>
+                        // Create a ResultSet that is scrollable and updatable  <br>
+                        ResultSet resultSet = statement.executeQuery("SELECT * FROM chats");  <br>
+            
+                        System.out.println("All rows before operations :");  <br>
+                        while (resultSet.next()) {  <br>
+                            System.out.println("Id = " + resultSet.getInt("id") + ", username = " + resultSet.getString("username") + ", message = " + resultSet.getString("message"));  <br>
+                        }  <br>
+            
+                        Scanner scanner = new Scanner(System.in);  <br>
+            
+                        // Insert a new row  <br>
+                        System.out.println("Enter values for new row:");  <br>
+                        System.out.print("Id: ");  <br>
+                        int id = scanner.nextInt();  <br>
+                        scanner.nextLine();  <br>
+                        System.out.print("Username: ");  <br>
+                        String usernameValue = scanner.nextLine();  <br>
+                        System.out.print("Message: ");  <br>
+                        String message = scanner.nextLine();  <br>  <br>
+            
+                        resultSet.moveToInsertRow();  <br>
+                        resultSet.updateInt("id", id);  <br>
+                        resultSet.updateString("username", usernameValue);  <br>
+                        resultSet.updateString("message", message);  <br>
+                        resultSet.insertRow();  <br>
+            
+                        // Update an existing row  <br>
+                        System.out.println("Enter values for row to update:");  <br>
+                        System.out.print("Id: ");  <br>
+                        int updateId = scanner.nextInt();  <br>
+                        scanner.nextLine();  <br>
+                        System.out.print("New message: ");  <br>
+                        String newMessage = scanner.nextLine();  <br>
+            
+                        resultSet.beforeFirst();  <br>
+                        while (resultSet.next()) {  <br>
+                            if (resultSet.getInt("id") == updateId) {  <br>
+                                resultSet.updateString("message", newMessage);  <br>
+                                resultSet.updateRow();  <br>
+                                break;  <br>
+                            }  <br>
+                        }  <br>
+                        <br>
+                        // Delete a row  <br>
+                        System.out.println("Enter id of row to delete:");  <br>
+                        int deleteId = scanner.nextInt();  <br>
+                        scanner.nextLine();  <br>
+            
+                        resultSet.beforeFirst();  <br>
+                        while (resultSet.next()) {  <br>
+                            if (resultSet.getInt("id") == deleteId){  <br>
+                                resultSet.deleteRow();  <br>
+                                break;  <br>
+                            }  <br>
+                        }  <br>
+            
+                        scanner.close();  <br>
+            
+                        System.out.println("All rows after operations :");  <br>
+                        resultSet.beforeFirst();  <br>
+                        while (resultSet.next()) {  <br>
+                            System.out.println("Id = " + resultSet.getInt("id") + ", username = " + resultSet.getString("username") + ", message = " + resultSet.getString("message"));  <br>
+                        }  <br>
+            
+                    } catch (SQLException e) {  <br>
+                        System.out.println("SQLException: " + e.getMessage());  <br>
+                    } catch (Exception e){  <br>
+                        System.out.println("Exception: " + e.getMessage());  <br>
+                    }  <br>
+                }
+            }
+        </p>
+    </body>
+</html>
+

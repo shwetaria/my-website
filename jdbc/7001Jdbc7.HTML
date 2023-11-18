@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.sql.*;  <br>
+            import java.util.Scanner;  <br>
+            
+            class DatabaseManager {  <br>
+                public static void main(String[] args) throws ClassNotFoundException {
+                   Class.forName("com.mysql.cj.jdbc.Driver");  <br>
+                    try {  <br>  <br>
+                        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/chatTest", "root", "");  <br>
+                        System.out.println("Connection successfully");  <br>
+                        Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);  <br>
+                        ResultSet result = st.executeQuery("select * from chats");  <br>
+            
+                        try{  <br>
+                            Scanner scanner = new Scanner(System.in);  <br>
+                            System.out.print("Enter row number : ");  <br>
+                            int row = scanner.nextInt();  <br>
+                            result.absolute(row);  <br>
+                            System.out.println("Id = "+result.getInt("id")+ ", username = " + result.getString("username") + ", message = " + result.getString("message"));  <br>
+                            scanner.close();  <br>
+                        } catch(NumberFormatException e){  <br>  <br>
+                            System.out.println("Exception: " + e.getMessage());  <br>
+                        }  <br>
+                        connection.close();  <br>
+                    } catch (SQLException e) {  <br>
+                        System.out.println("SQL Exception: " + e.getMessage());  <br>
+                    } catch (Exception e){  <br>
+                        System.out.println("Exception: " + e.getMessage());  <br>
+                    }  <br>
+                }
+            }
+        </p>
+    </body>
+</html>
+

@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+          // Program to insert, delete, update in table using PreparedStatement.<br>
+          import java.sql.*;<br>
+          import java.util.Scanner;<br>
+          
+          class Database{<br>
+              Connection c;<br>
+              PreparedStatement s;<br>
+              public Database(String url,String uname,String pass) throws SQLException,ClassNotFoundException{<br>
+              Class.forName("com.mysql.cj.jdbc.Driver");<br>
+                   c=DriverManager.getConnection(url,uname,pass);<br>
+              }<br>
+               void insert() throws SQLException {<br>
+              s=c.prepareStatement("insert into users values(?,?,?)");<br>
+              s.setInt(1,13);<br>
+              s.setString(2,"Ankush");<br>
+              s.setString(3,"Ankush@gmail.com");<br>
+          System.out.println(s.executeUpdate() +"Row affected");<br>
+             }<br>
+               void delete() throws SQLException {<br>
+                  s=c.prepareStatement("delete from users where id=?");<br>
+                  s.setInt(1,8);<br>
+          System.out.println(s.executeUpdate() +"Row affected");<br>
+                  }<br>
+          
+               void update() throws SQLException {<br>
+                 s=c.prepareStatement("update users set username=? where id=?");<br>
+                 s.setString(1,"Srk");<br>
+                 s.setInt(2,1);<br>
+                 System.out.println(s.executeUpdate() +"Row affected");<br>
+                  }<br>
+          }<br>
+          class Db{<br>
+              public static void main(String str [])throws SQLException,ClassNotFoundException,java.io.IOException{<br>
+                  String url = "jdbc:mysql://localhost:3306/mydb";<br>
+                  String username = "root";<br>
+                  String password = "";<br>
+                  Database d=new Database(url,username,password);<br>
+                  int c = 5;<br>
+                  Scanner sc=new Scanner(System.in);<br>
+                  while(c!=4){<br>
+                      System.out.println(" Press 1 for insert. \n Press 2 for delete \n Press 3 for update \n Press 4 for Exit");<br>
+                      c=sc.nextInt();<br>
+                      switch(c){<br>
+                        case 1:<br>
+                        d.insert();<br>
+                        break;<br>
+                        
+                        case 2:<br>
+                        d.delete();<br>
+                        break;<br>
+                        
+                        case 3:<br>
+                        d.update();<br>
+                        break;<br>
+                        case 4:<br>
+                        System.out.println("Exit Successfully");<br>
+                        break;<br>
+                        default :<br>
+                        System.out.println("Choose between 1-4");<br>
+                        break;<br>
+                      }<br>
+                  }<br>
+              }<br>
+          }<br>
+          
+        </p>
+    </body>
+</html>
+

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+
+            import java.sql.*;<br>
+
+            class employee{<br>
+            public static void main(String s[]){<br>
+                <br>
+            try{<br>
+            Class.forName("com.mysql.cj.jdbc.Driver");<br>
+            Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root","");<br>
+            <br>
+            Statement s1=con.createStatement();<br>
+            int x= s1.executeUpdate("insert into users values(8,'test','something@gmail.com')");<br>
+            if(x==1){<br>
+            System.out.println("Row inserted successfully");}<br>
+            }catch(ClassNotFoundException e){System.out.println(e);}<br>
+            catch(SQLException e){System.out.println(e);}<br>
+            }}<br>
+        </p>
+    </body>
+</html>
+

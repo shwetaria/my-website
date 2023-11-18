@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.sql.Connection;  <br>
+            import java.sql.DriverManager;  <br>
+            import java.sql.SQLException;  <br>
+            import java.sql.Statement;  <br>
+            
+            class DatabaseUpdateWithStatement {  <br>
+                public static void main(String[] args) {  <br>
+                    String url = "jdbc:mysql://localhost:3306/mydb";  <br>
+                    String username = "root";  <br>
+                    String password = "";  <br>
+            
+                    // SQL update statement  <br>
+                    String updateSql = "UPDATE users SET id = 2 WHERE id = 5";  <br>
+                    <br>
+                    try {  <br>
+                        Connection connection = DriverManager.getConnection(url, username, password);  <br>
+                        Statement statement = connection.createStatement();  <br>
+                        int rowsAffected = statement.executeUpdate(updateSql);  <br>
+                        <br>
+                        if (rowsAffected > 0) {  <br>
+                            System.out.println("Row updated successfully.");  <br>
+                        } else {  <br>
+                            System.out.println("No rows updated.");  <br>
+                        }  <br>
+                    } catch (SQLException e) {  <br>
+                        e.printStackTrace();  <br>
+                    }  <br>
+                }  <br>
+            }
+        </p>
+    </body>
+</html>
+
