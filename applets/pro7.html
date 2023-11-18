@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /*Java Applet to Print Concentric Circles using Applet*/<br>
+            import java.applet.*;<br>
+            import java.awt.*;<br>
+            public class pro7 extends Applet<br>
+            {<br>
+                //Initialize the applet<br>
+                public void init()<br>
+                {<br>
+                setBackground(Color.yellow);<br>
+                }<br>
+                //Draw cocentric circle<br>
+                public void paint(Graphics g)<br>
+                {<br>
+                g.setColor(Color.red);<br>
+                int rad=25;<br>
+                int dia=50;<br>
+                for(int i=0;i<4;i++)<br>
+                {<br>
+                    g.drawOval(250-(i*rad),250-(i*rad),(i+1)*dia,(i+1)*dia);<br>
+                }<br>
+                }<br>
+            }
+            /*
+            <applet code = pro7 width=500 height=500><br>
+            </applet><br>
+            */<br>
+        </p>
+    </body>
+    </html>

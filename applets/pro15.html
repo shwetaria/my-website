@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+         import java.applet.Applet;<br>    
+         import java.awt.*;<br>    
+         
+            //<applet code= appro1 width= 600 height=500 ></applet><br>    
+            
+         public class appro1 extends Applet <br>    
+         {<br>    
+           public void paint(Graphics g) <br>    
+            {<br>    
+               setBackground(Color.red);<br>    
+               g.setColor(Color.yellow);<br>    
+               g.fillOval(100, 100, 350, 350);<br>    
+               g.setColor(Color.black);<br>    
+               g.fillOval(195, 190, 40, 40);<br>    
+               g.fillOval(325, 190, 40, 40);<br>    <br>    
+               g.drawArc(200, 290, 150, 70, 180, 180);<br>    
+            }<br>    
+            <br>    
+         }<br>    
+        </p>
+    </body>
+    </html>

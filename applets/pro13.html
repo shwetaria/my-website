@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+         import java.awt.*;   <br> 
+         import java.applet.*;  <br>  
+             public class pro13 extends Applet <br>   
+          {    <br>
+            Font f1,f2,f3;    <br>
+            <br>
+            public void  init()    <br>
+             {    <br><br>
+                f1 = new Font("Arial",Font.BOLD,18);    <br>
+                f2 = new Font("Forte",Font.PLAIN,24);   <br> 
+                f3 = new Font("Elephant",Font.ITALIC,28);<br>    
+             }    <br>    
+             <br>    
+            public void  paint(Graphics g) <br>    <br>       
+            {    <br>    
+               g.drawString("Welcome",50,50);  <br>      
+               <br>    
+               g.setFont(f1);     <br>    
+               g.drawString("to ",50,80);    <br>    
+               <br>    
+               g.setFont(f2);     <br>    
+               g.drawString("My ",50,110);    <br>    
+               <br>    
+               g.setFont(f3);     <br>    
+               g.drawString("Website",50,140);   <br>     
+            }    <br>    
+          }    <br>    
+          <br>    
+         /* <applet code = "pro13" height = 500 width =500>  <br>    
+            </applet> */<br>    
+        </p>
+    </body>
+    </html>

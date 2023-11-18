@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.awt.*;<br>    
+            import java.applet.Applet;<br>    
+            import java.text.DateFormat;<br>    
+            import java.text.SimpleDateFormat;<br>    
+            import java.util.Date;<br>    
+            public class pro14 extends Applet {<br>    
+                DateFormat dateFormat;<br>    
+                Date date;<br>    <br>    
+                Thread t;<br>    
+                public void init() {<br>    
+                    this.setSize(300,200);<br>    
+                }<br>    
+                public void paint(Graphics g)<br>    
+                {<br>    
+                    try<br>    
+                    {<br>    
+                        Font f=new Font("Arial",Font.BOLD,50);<br>    
+                        g.setFont(f);<br>    
+                        g.setColor(Color.DARK_GRAY);<br>    
+                        dateFormat = new SimpleDateFormat("hh:mm:ss a");<br>    
+                        date = new Date();<br>    
+                        g.drawString(dateFormat.format(date),5,100);<br>    
+                        Font f1=new Font("Arial",Font.BOLD,10);<br>    
+                        g.setFont(f1);<br>    
+                        t.sleep(1000);<br>    
+                        repaint();<br>    
+                    }catch(Exception e)<br>    
+                    {<br>    
+                        <br>    
+                    }<br>    
+                }<br>    
+            }<br>    
+            /* <applet code = "pro14" height = 500 width =500>  <br>    
+               </applet> */<br>    
+        </p>
+    </body>
+    </html>import java.awt.*;<br>    
+import java.applet.Applet;<br>    
+import java.text.DateFormat;<br>    
+import java.text.SimpleDateFormat;<br>    
+import java.util.Date;<br>    
+public class pro14 extends Applet {<br>    
+    DateFormat dateFormat;<br>    
+    Date date;<br>    <br>    
+    Thread t;<br>    
+    public void init() {<br>    
+        this.setSize(300,200);<br>    
+    }<br>    
+    public void paint(Graphics g)<br>    
+    {<br>    
+        try<br>    
+        {<br>    
+            Font f=new Font("Arial",Font.BOLD,50);<br>    
+            g.setFont(f);<br>    
+            g.setColor(Color.DARK_GRAY);<br>    
+            dateFormat = new SimpleDateFormat("hh:mm:ss a");<br>    
+            date = new Date();<br>    
+            g.drawString(dateFormat.format(date),5,100);<br>    
+            Font f1=new Font("Arial",Font.BOLD,10);<br>    
+            g.setFont(f1);<br>    
+            t.sleep(1000);<br>    
+            repaint();<br>    
+        }catch(Exception e)<br>    
+        {<br>    
+            <br>    
+        }<br>    
+    }<br>    
+}<br>    
+/* <applet code = "pro14" height = 500 width =500>  <br>    
+   </applet> */<br>    
