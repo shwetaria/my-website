@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.util.Date;<br>
+            <br>
+            public class CustomDate {<br>
+                private Date date;<br>
+                <br><br>
+                public CustomDate() {<br>
+                    date = new Date();<br>
+                }<br>
+                <br>
+                public Date getCurrentDate() {<br>
+                    return date;<br>
+                }<br>
+                <br>
+                public static void main(String[] args) {<br>
+                    CustomDate customDate = new CustomDate();<br>
+                    Date currentDate = customDate.getCurrentDate();<br>
+                    <br>
+                    System.out.println("Current Date: " + currentDate);<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>
