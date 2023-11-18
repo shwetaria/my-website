@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class Animal {<br>
+                public void move() {<br>
+                    System.out.println("The animal moves.");<br>
+                }<br><br>
+            }<br>
+            <br>
+             class Cheetah extends Animal {<br>
+               @Override<br>
+                public void move() {<br>
+                    System.out.println("The Cheetah runs.");<br>
+                }<br>
+            }<br>
+            <br>
+            class  Main_c{<br>
+                public static void main(String x[] ) {<br>
+                    Animal a = new Animal();<br>
+                    Cheetah c = new Cheetah();        <br>
+                    a.move();<br>
+                    c.move();<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

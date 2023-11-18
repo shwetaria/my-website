@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class Animal {<br>
+                String name;<br>
+                <br>
+                Animal(String name) {<br>
+                    this.name = name;<br>
+                }<br>
+                <br>
+                void makeSound() {<br>
+                    System.out.println("The animal makes a sound.");<br>
+                }<br>
+            }<br>
+            <br>
+            class Dog extends Animal {<br>
+                String breed;<br>
+                <br>
+                Dog(String name, String breed) {<br>
+                    super(name); <br>
+                    <br>
+                    this.breed = breed;<br>
+                }<br>
+                <br>
+                void makeSound() {<br>
+                    super.makeSound(); <br>
+                    
+                    System.out.println("The dog barks.");<br>
+                }<br>
+            
+                void displayInfo() {<br>
+                    System.out.println("Name: " + name);<br>
+                    System.out.println("Breed: " + breed);<br>
+                }<br>
+            }<br>
+            <br>
+             class demo {<br>
+                public static void main(String[] args) {<br>
+                    Dog myDog = new Dog("Buddy", "Golden Retriever");<br>
+                    myDog.makeSound(); <br>
+                    <br>
+                    System.out.println();<br>
+                    myDog.displayInfo();<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

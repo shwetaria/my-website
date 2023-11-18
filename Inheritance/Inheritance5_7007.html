@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /*Write a Java program to create a class known as "BankAccount" with methods called deposit() and withdraw(). Create a subclass called SavingsAccount that
+            overrides the withdraw() method to prevent withdrawals if the account balance falls below one hundred.*/
+            
+            class BankAccount <br>
+            {<br>
+            float bal=0;<br>
+            <br>
+            BankAccount(){}<br>
+            BankAccount(float b)<br>
+            {<br>
+            bal=b;<br>
+            }<br><br>
+            <br>
+            void deposit(int b)<br>
+            {<br>
+                <br><br>
+            bal=bal+b;<br>
+            System.out.println("Amount " +b+ " Successfully deposited\nCurrent balance = " +bal+ "\n");<br>
+            }<br>
+            <br>
+            void withdraw(int b)<br>
+            {<br>
+            if (b>0 && b<=bal)<br>
+            {<br>
+            System.out.println("Collect your amount = " +b);<br>
+            bal=bal-b;<br>
+            System.out.println("Current balance = " +bal+ "\n");<br>
+            }<br>
+            else<br><br>
+            {<br><br>
+            System.out.println("Insufficient balance");<br>
+            }<br><br>
+            }<br><br>
+            }<br>
+            <br>
+            <br>
+            class SavingsAccount extends BankAccount<br><br>
+            {<br>
+            
+            SavingsAccount(float b)<br>
+            {<br>
+            bal=b;<br>
+            }<br>
+            <br>
+            void withdraw(int b)<br>
+            {<br>
+            if(bal<100 && bal<b)<br>
+            {<br>
+            System.out.println("Insufficient balence");<br>
+            } <br>
+            else<br>
+            {<br>
+            System.out.println("Collect your amount = " +b);<br>
+            bal=bal-b;<br>
+            System.out.println("Current balance = " +bal+ "\n");<br>
+            }<br>
+            }<br>
+            <br>
+            public static void main(String args[])<br>
+            {<br><br><br>
+                <br>
+            BankAccount obj1=new BankAccount(200);<br>
+            <br>
+            obj1.deposit(100);<br>
+            <br>
+            obj1.withdraw(300);<br><br>
+            
+            SavingsAccount obj2=new SavingsAccount(10);<br>
+            obj2.withdraw(100);<br>
+            <br>
+            
+            }<br>
+            
+            <br>
+            }<br>
+        </p>
+    </body>
+    </html>

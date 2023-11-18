@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            // Define the base class Employee<br>
+            class Employee {<br>
+                private String name;<br>
+                private String address;<br>
+                private double salary;<br>
+                private String jobTitle;<br>
+                <br>
+                public Employee(String name, String address, double salary, String jobTitle) {<br>
+                    this.name = name;<br>
+                    this.address = address;<br>
+                    this.salary = salary;<br>
+                    this.jobTitle = jobTitle;<br>
+                }<br>
+            
+                public String getName() {<br>
+                    return name;<br>
+                }<br>
+            
+                public String getAddress() {<br>
+                    return address;<br>
+                }<br>
+                <br>
+                public double getSalary() {<br>
+                    return salary;<br>
+                }<br>
+                <br>
+                public String getJobTitle() {<br>
+                    return jobTitle;<br>
+                }<br>
+                <br>
+                public double calculateBonus() {<br><br>
+                    return 0; // Default bonus calculation for generic Employee<br>
+                }<br>
+            
+                public String generatePerformanceReport() {<br>
+                    return "Performance report for " + name + ":\n" +<br>
+                            "No specific performance metrics available.";<br>
+                }<br>
+            
+                public void manageProject(String projectName) {<br>
+                    System.out.println(name + " is managing project: " + projectName);<br>
+                }<br>
+            }<br>
+            <br>
+            // Subclass Manager<br>
+            class Manager extends Employee {<br>
+                private int teamSize;<br>
+            
+                public Manager(String name, String address, double salary, String jobTitle, int teamSize) {<br>
+                    super(name, address, salary, jobTitle);<br>
+                    this.teamSize = teamSize;<br>
+                }<br>
+                <br>
+                public int getTeamSize() {<br>
+                    return teamSize;<br>
+                }<br>
+            
+                @Override<br>
+                public double calculateBonus() {<br>
+                    return getSalary() * 0.15; // Bonus calculation for Manager<br>
+                }<br>
+            
+                @Override<br>
+                public String generatePerformanceReport() {<br>
+                    return "Performance report for Manager " + getName() + ":\n" +<br>
+                            "Team size: " + teamSize + " members";<br>
+                }<br><br>
+            }<br>
+            <br>
+            // Subclass Developer<br>
+            class Developer extends Employee {<br><br>
+                private String programmingLanguage;<br>
+                <br>
+                public Developer(String name, String address, double salary, String jobTitle, String programmingLanguage) {<br>
+                    super(name, address, salary, jobTitle);<br>
+                    this.programmingLanguage = programmingLanguage;<br>
+                }<br>
+                <br>
+                public String getProgrammingLanguage() {<br>
+                    return programmingLanguage;<br>
+                }<br>
+                <br>
+                @Override<br>
+                public double calculateBonus() {<br>
+                    return getSalary() * 0.1; // Bonus calculation for Developer<br>
+                }<br>
+                <br>
+                @Override<br>
+                public String generatePerformanceReport() {<br>
+                    return "Performance report for Developer " + getName() + ":\n" +<br>
+                            "Programming language: " + programmingLanguage;<br>
+                }<br>
+            }<br>
+            <br>
+            // Subclass Programmer<br>
+            class Programmer extends Developer {<br>
+                public Programmer(String name, String address, double salary, String programmingLanguage) {<br>
+                    super(name, address, salary, "Programmer", programmingLanguage);<br>
+                }<br>
+                <br><br>
+                // No need to override calculateBonus() and generatePerformanceReport()<br>
+            }<br>
+            
+            // Main class to test the implementation<br>
+            class inheritance10 {<br>
+                public static void main(String[] args) {<br>
+                    Manager manager = new Manager("Rohan", "123 Main St", 70000, "Manager", 5);<br>
+                    Developer developer = new Developer("Ram", "456 Oak Ave", 60000, "Developer", "Java");<br>
+                    Programmer programmer = new Programmer("Shyam", "789 Elm Dr", 50000, "Python");<br>
+                    <br><br>
+                    System.out.println(manager.generatePerformanceReport());<br>
+                    System.out.println("Bonus: =" + manager.calculateBonus()+"rs");<br>
+                    manager.manageProject("Project A");<br>
+            
+                    System.out.println(developer.generatePerformanceReport());<br>
+                    System.out.println("Bonus: =" + developer.calculateBonus()+"rs");<br>
+                    developer.manageProject("Project B");<br>
+                    <br>
+                    System.out.println(programmer.generatePerformanceReport());<br><br>
+                    System.out.println("Bonus: =" + programmer.calculateBonus()+"rs");<br>
+                    programmer.manageProject("Project C");<br>
+                }<br>
+            }<br>
+            
+            
+        </p>
+    </body>
+    </html>

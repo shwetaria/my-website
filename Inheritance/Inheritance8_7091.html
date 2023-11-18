@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.util.Scanner;<br>
+            class Shape {<br>
+                public Shape() {<br>
+                }<br>
+                public double getPerimeter() {<br>
+                    System.out.println("Perimeter calculation for generic shape.");<br>
+                    return 0.0;<br>
+                }<br>
+                public double getArea() {<br>
+                    System.out.println("Area calculation for generic shape.");<b<br>r>
+                    return 0.0;<br>
+                }<br>
+            }<br>
+            class Circle extends Shape {<br>
+                private double radius;<br>
+                public Circle(double radius) {<br>
+                    this.radius = radius;<br>
+                }<br>
+                @Override<br>
+                public double getPerimeter() {<br>
+                    return 2 * Math.PI * radius;<br>
+                }<br>
+                @Override<br>
+                public double getArea() {<br>
+                    return Math.PI * radius * radius;<br>
+                }<br>
+            }<br>
+            class Shapetest {<br>
+                public static void main(String[] args) {<br>
+                    Scanner scanner = new Scanner(System.in);<br>
+                    System.out.print("Enter the radius of the circle: ");<br>
+                    double radius = scanner.nextDouble();<br>
+                    Circle circle = new Circle(radius);<br>
+                    System.out.println("Perimeter of the circle: " + circle.getPerimeter());<br<br>>
+                    System.out.println("Area of the circle: " + circle.getArea());<br>
+                    <br>
+                    scanner.close();<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>

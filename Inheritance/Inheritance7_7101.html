@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            //Write a Java program to create a class known as Person with methods called getFirstName() and getLastName(). Create a subclass called Employee that adds a new method named getEmployeeId() and overrides the getLastName() method to include the employee's job title
+
+            class Person {<br>
+                private String firstName;<br>
+                private String lastName;<br>
+                <br>
+                public Person(String firstName, String lastName) {<br>
+                    this.firstName = firstName;<br>
+                    this.lastName = lastName;<br>
+                }<br>
+                <br>
+                public String getFirstName() {<br>
+                    return firstName;<br>
+                }<br>
+                <br>
+                public String getLastName() {<br>
+                    return lastName;<br>
+                }<br>
+            }<br>
+            
+            class Employee extends Person {<br>
+                private int employeeId;<br>
+                private String jobTitle;<br>
+                <br>
+                public Employee(String firstName, String lastName, int employeeId, String jobTitle) {<br>
+                    super(firstName, lastName);<br>
+                    this.employeeId = employeeId;<br>
+                    this.jobTitle = jobTitle;<br>
+                }<br>
+                <br>
+                public int getEmployeeId() {<br>
+                    return employeeId;<br>
+                }<br>
+                <br>
+                
+                public String getLastName() {<br>
+                    return super.getLastName() + " (" + jobTitle + ")";<br>
+                }<br>
+            }<br>
+            
+            class PersonAndEmployeeExample {<br>
+                public static void main(String[] args) {<br>
+                    Person person = new Person("Bharat", "Bhatt");<br>
+                    Employee employee = new Employee("Ravi", "Bhatt", 12345, "Software Engineer");<br>
+                    <br>
+                    System.out.println("Person: " + person.getFirstName() + " " + person.getLastName());<br>
+                    System.out.println("Employee: " + employee.getFirstName() + " " + employee.getLastName() + ", Employee ID: " + employee.getEmployeeId());<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

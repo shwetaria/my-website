@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /*Write a Java program to create a class called Shape with a method called getArea(). Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle. */
+
+            // Shape class<br>
+            class Shape {<br>
+                public double getArea() {<br>
+                    return 0; // Default implementation for unknown shapes<br>
+                }<br>
+            }<br>
+            <br>
+            // Rectangle subclass extending Shape<br>
+            class Rectangle extends Shape {<br>
+                private double length;<br>
+                private double width;<br>
+            
+                public Rectangle(double length, double width) {<br>
+                    this.length = length;<br>
+                    this.width = width;<br>
+                }<br>
+                <br>
+                @Override<br>
+                public double getArea() {<br>
+                    return length * width; // Calculate area of rectangle<br>
+                }<br>
+            }<br>
+            <br><br>
+            class Inheritance3 {<br>
+                public static void main(String[] args) {<br>
+                    Shape shape = new Shape(); // Creating an instance of Shape (will use default getArea())<br>
+                    <br>
+                    Rectangle rectangle = new Rectangle(20, 40); // Creating an instance of Rectangle<br>
+                    double rectangleArea = rectangle.getArea(); // Calculating area of rectangle<br>
+                    <br>
+                    System.out.println("Area of a shape (default): " + shape.getArea());<br>
+                    System.out.println("Area of a rectangle: " + rectangleArea);<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>

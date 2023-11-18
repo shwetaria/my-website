@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /*Write a java program to create a class Animal with a method called makeSound(). Create a subclass called Cat that overrides the makeSound() method to bark */
+
+            // Animal class<br>
+            class Animal {<br>
+                public void makeSound() {<br>
+                    System.out.println("this is from animal class...");<br>
+                }<br>
+            }<br>
+            
+            // Cat subclass extending Animal<br>
+            class Cat extends Animal {<br>
+                @Override<br>
+                public void makeSound() {<br>
+                    System.out.println("cat does not barking"); // Cat overrides to bark<br>
+                }<br>
+            }<br>
+            
+            class Inheritance1 {<br>
+                public static void main(String[] args) {<br>
+                    Animal genericAnimal = new Animal(); // Creating an instance of Animal<br>
+                    Animal myCat = new Cat(); // Creating an instance of Cat as Animal<br>
+                    <br>
+                    System.out.println("Sound of animal:");<br>
+                    genericAnimal.makeSound(); // Calling makeSound() on the generic animal<br>
+            
+                    System.out.println("\nSound of the cat:");<br>
+                    myCat.makeSound(); // Calling makeSound() on the cat (which will bark - overridden method)<br>
+                }<br>
+            }<br>
+            
+            
+        </p>
+    </body>
+    </html>

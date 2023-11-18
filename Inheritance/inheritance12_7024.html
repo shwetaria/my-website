@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /* Create a program, showing an example of super function */
+
+            class Animal{  <br>
+            String color="white";  <br>
+            }  <br>
+            class Dog extends Animal{  <br>
+            String color="brown";  <br>
+            void printColor(){  <br>
+            System.out.println(color);//prints color of Dog class  <br>
+            System.out.println(super.color);//prints color of Animal class <br> 
+            }  <br>
+            }  <br>
+            class TestSuper1{  <br>
+            public static void main(String args[]){  <br>
+            Dog d=new Dog();  <br>
+            d.printColor();  <br>
+            }}  <br>
+            
+            
+        </p>
+    </body>
+    </html>

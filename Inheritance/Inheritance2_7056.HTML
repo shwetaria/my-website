@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /* Write a Java program to create a class called Vehicle with a method called drive(). Create a subclass called Car that overrides the drive() method to print "Repairing a car". */
+
+            // Vehicle class<br>
+            class Vehicle {<br>
+                public void drive() {<br>
+                    System.out.println("Driving a vehicle...");<br>
+                }<br>
+            }<br>
+            
+            // Car subclass extending Vehicle<br>
+            class Car extends Vehicle {<br>
+                @Override<br>
+                public void drive() {<br>
+                    System.out.println("Repairing a car"); // Car overrides to repair<br>
+                }<br>
+            }<br>
+            
+            class Inheritance2 {<br>
+                public static void main(String[] args) {<br>
+                    Vehicle vehicle = new Vehicle(); // Creating an instance of Vehicle<br>
+                    Vehicle car = new Car(); // Creating an instance of Car as Vehicle<br>
+                    <br>
+                    System.out.println("Driving a vehicle:");<br>
+                    vehicle.drive(); // Calling drive() on the vehicle<br>
+                    <br>
+                    System.out.println("\nRepairing a car:");<br>
+                    car.drive(); // Calling drive() on the car (which will repair - overridden method)<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>

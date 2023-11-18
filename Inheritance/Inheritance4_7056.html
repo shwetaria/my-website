@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /*Write a Java program to create a class called Employee with methods called work() and getSalary(). Create a subclass called HRManager that overrides the work() method and adds a new method called addEmployee(). */
+
+            // Employee class<br>
+            class Employee {<br>
+                private double salary;<br>
+                <br>
+                public Employee(double salary) {<br>
+                    this.salary = salary;<br>
+                }<br>
+                <br>
+                public void work() {<br>
+                    System.out.println("Employee is working...");<br>
+                }<br>
+                <br><br>
+                public double getSalary() {<br>
+                    return salary;<br>
+                }<br>
+            }<br>
+            <br>
+            // HRManager subclass extending Employee<br>
+            class HRManager extends Employee {<br>
+                public HRManager(double salary) {<br>
+                    super(salary);<br>
+                }<br>
+                <br>
+                @Override<br>
+                public void work() {<br>
+                    System.out.println("HR Manager is working...");<br>
+                }<br><br>
+                <br>
+                public void addEmployee() {<br>
+                    System.out.println("HR Manager is adding a new employee...");<br>
+                }<br>
+            }<br>
+            <br>
+            class Inheritance4 {<br><br>
+                public static void main(String[] args) {<br>
+                    Employee emp = new Employee(6000); // Creating an instance of Employee<br>
+                    HRManager hrManager = new HRManager(7500); // Creating an instance of HRManager<br>
+                    <br>
+                    emp.work(); // Calling work() for Employee<br>
+                    System.out.println("Employee Salary: " + emp.getSalary());<br>
+                    <br>
+                    System.out.println();<br>
+                    <br>
+                    hrManager.work(); // Calling work() for HRManager (overridden method)<br>
+                    System.out.println("HR Manager Salary: " + hrManager.getSalary());<br>
+                    <br>
+                    hrManager.addEmployee(); // Calling addEmployee() for HRManager (specific method)<br>
+                }<br>
+            }<br>
+            
+        </p>
+    </body>
+    </html>
