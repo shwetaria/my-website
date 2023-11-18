@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            /*Write a java method to count all the words in a string.*/
+
+            class a<br>
+            <br>
+            {<br>
+            
+            static int countWord(String s)<br>
+            {<br>
+            int t=1;<br>
+            for(int i=0; i<s.length(); i++)<br>
+            {<br>
+            
+            if((s.charAt(i) == ' ') && (s.charAt(i+1) != ' '))<br>
+            {<br>
+            t++;<br>
+            }<br>
+            }<br>
+            return t;<br>
+            }<br>
+            <br>
+            public static void main(String args[])<br>
+            {<br>
+                <br>
+            System.out.println(countWord("Hello How are you"));<br>
+            }<br>
+            <br>
+            }<br>
+        </p>
+    </body>
+    </html>

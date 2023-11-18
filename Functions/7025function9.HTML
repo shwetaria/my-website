@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class Function9 {<br>
+                public static void main(String[] args) {<br>
+                    findTwinPrimes(100);<br>
+                }<br>
+            
+                <br>
+                private static boolean isPrime(int num) {<br>
+                    if (num < 2) {<br>
+                        return false;<br>
+                    }<br>
+                    for (int i = 2; i <= Math.sqrt(num); i++) {<br>
+                        if (num % i == 0) {<br>
+                            return false;<br>
+                        }<br>
+                    }<br>
+                    return true;<br>
+                }<br>
+            
+                <br>
+                private static void findTwinPrimes(int limit) {<br>
+                    System.out.println("Twin Prime Numbers less than " + limit + ":");<br>
+                    for (int i = 3; i < limit; i++) {<br>
+                        if (isPrime(i) && isPrime(i + 2)) {<br>
+                            System.out.println("(" + i + ", " + (i + 2) + ")");<br>
+                    }<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

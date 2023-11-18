@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+			import java.util.Scanner;<br>
+			class FutureInvestment {<br>
+			   <br>
+			public static void main(String[] args) {<br>
+			   Scanner in = new Scanner(System.in); <br>
+			   System.out.print("Input the investment amount: ");<br>
+				double investment = in.nextDouble();<br>
+				System.out.print("Input the rate of interest: ");<br>
+			   double rate = in.nextDouble();<br>
+			   System.out.print("Input number of years: ");<br>
+			   int year = in.nextInt();<br>
+			   
+			   rate *= 0.01;<br>
+			   <br>
+			   System.out.println("Years    FutureValue");<br>
+			   for(int i = 1; i <= year; i++) {<br>
+				   int formatter = 19;<br>
+				   if (i >= 10) formatter = 18;<br>
+				   System.out.printf(i + "%"+formatter+".2f\n", futureInvestmentValue(investment, rate/12, i));<br>
+				  }<br>
+				}<br>
+				<br>
+			public static double futureInvestmentValue(double investmentAmount, double monthlyInterestRate, int years) {<br>
+				   return investmentAmount * Math.pow(1 + monthlyInterestRate, years * 12);<br>
+			   }<br>
+		   }<br>
+		   
+        </p>
+    </body>
+    </html>

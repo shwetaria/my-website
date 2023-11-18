@@ -1,0 +1,43 @@
+/* Write a java method to find the smallest number amoung three numbers. */
+
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class function1{<br>
+                public static void main(String[] args) {<br>
+                    int num1 = 3;<br>
+                    int num2 = 17;<br>
+                    int num3 = 5;<br>
+            
+                    int smallest = findSmallestNumber(num1, num2, num3);<br>
+            
+                    System.out.println("The smallest number is: " + smallest);<br>
+                }<br>
+            
+                public static int findSmallestNumber(int num1, int num2, int num3) {<br>
+                    int smallest = num1;<br>
+            
+                    if (num2 < smallest) {<br>
+                        smallest = num2;<br>
+                    }<br>
+            
+                    if (num3 < smallest) {<br>
+                        smallest = num3;<br>
+                    }<br>
+                    <br>
+                    return smallest;<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

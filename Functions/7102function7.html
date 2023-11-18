@@ -1,0 +1,73 @@
+
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.util.Scanner;<br>
+
+            class Password {<br>
+               <br>
+           public static final int PASSWORD_LENGTH = 8;<br>
+           <br>
+           public static void main(String[] args) {<br>
+               <br>
+                   Scanner input = new Scanner(System.in);<br>
+                   System.out.print(<br>
+                           "1. A password must have at least eight characters.\n" +<br>
+                           "2. A password consists of only letters and digits.\n" +<br>
+                           "3. A password must contain at least two digits \n" +<br>
+                           "Input a password (You are agreeing to the above Terms and Conditions.): ");<br>
+                   String s = input.nextLine();<br>
+                   <br>
+                   if (is_Valid_Password(s)) {<br>
+                       System.out.println("Password is valid: " + s);<br>
+                   } else {<br>
+                       System.out.println("Not a valid password: " + s);<br>
+                   }<br>
+           
+               }<br>
+               <br>
+               public static boolean is_Valid_Password(String password) {<br>
+           
+                   if (password.length() < PASSWORD_LENGTH) return false;<br>
+           
+                   int charCount = 0;<br>
+                   int numCount = 0;<br>
+                   for (int i = 0; i < password.length(); i++) {<br>
+           
+                       char ch = password.charAt(i);<br>
+                       <br>
+                       if (is_Numeric(ch)) numCount++;<br>
+                       else if (is_Letter(ch)) charCount++;<br>
+                       else return false;<br>
+                   }<br>
+           
+           
+                   return (charCount >= 2 && numCount >= 2);<br>
+               }<br>
+               <br><br>
+               public static boolean is_Letter(char ch) {<br>
+                   ch = Character.toUpperCase(ch);<br>
+                   return (ch >= 'A' && ch <= 'Z');<br>
+               }<br>
+           
+               <br>
+               public static boolean is_Numeric(char ch) {<br>
+                   <br>
+                   return (ch >= '0' && ch <= '9');<br>
+               }<br>
+               <br>
+           }<br>
+           
+        </p>
+    </body>
+    </html>

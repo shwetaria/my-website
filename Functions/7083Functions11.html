@@ -1,0 +1,39 @@
+
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+          import java.util.Scanner;<br>
+          class check_consecutive { <br>
+          public static void main(String s[] )<br>
+             {<br>
+                 Scanner in = new Scanner(System.in);<br>
+                 System.out.print("Input the first number: ");<br>
+                 int x = in.nextInt();<br>
+                 System.out.print("Input the second number: ");<br>
+                 int y = in.nextInt();<br>
+                 System.out.print("Input the third number: ");<br>
+                 int z = in.nextInt();<br>
+                 System.out.print("The three given numbers are consecutive(true or false) : ") ;<br>
+                 System.out.println(test(x,y,z));<br>
+                 }<br>
+         
+          public static boolean test(int x, int y, int z){<br>
+             int max_num = Math.max(x, Math.max(y, z));<br>
+             int min_num = Math.min(x, Math.min(y, z));<br>
+             int middle_num = x+y+z - max_num - min_num;<br>
+             return (max_num - middle_num) == 1 && (middle_num - min_num == 1);<br>
+           }<br>
+         } <br>
+        </p>
+    </body>
+    </html>

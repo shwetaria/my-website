@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            class CharacterPrinter {<br><br>
+                static void printCharactersBetween(char startChar, char endChar) {
+                   if (startChar > endChar) {<br>
+                       char temp = startChar;<br>
+                       startChar = endChar;<br>
+                       endChar = temp;<br>
+                   }<br>
+           
+                   for (char ch = startChar; ch < endChar; ch++) {<br>
+                       System.out.print(ch + " ");<br>
+                   }<br>
+                   System.out.println(endChar); <br>
+               }<br>
+               <br>
+               public static void main(String[] args) {<br>
+                   char startChar = 'A';<br>
+                   char endChar = 'F';<br>
+                   <br>
+                   System.out.println("Characters between " + startChar + " and " + endChar + ":");<br>
+                   printCharactersBetween(startChar, endChar);<br>
+               }<br>
+           }<br>
+           
+        </p>
+    </body>
+    </html>

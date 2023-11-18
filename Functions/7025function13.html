@@ -1,0 +1,75 @@
+/*
+ * 
+ 
+ <html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            * Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.<br>
+            */<br>
+            
+            class Test<br>
+            {<br>
+                static boolean isVowel(char c)<br>
+                {<br>
+                    if (c == 'a')<br><br>
+                    {<br>
+                        return true;<br>
+                    }<br>
+                    else if (c == 'a')<br>
+                    {<br>
+                        return true;<br>
+                    }<br>
+                    else if (c == 'u')<br>
+                    {<br>
+                        return true;<br>
+                    }<br>
+                    else if (c == 'e')<br>
+                    {<br>
+                        return true;<br>
+                    }<br>
+                    else if (c == 'i')<br>
+                    {<br>
+                        return true;<br>
+                    }<br>
+                    else if (c == 'o')<br>
+                    {<br>
+                        return true;<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                        return false;<br><br>
+                    }<br>
+                }<br>
+            
+                static boolean isStringInsideVowel(String line)<br>
+                {<br>
+                    for (int i = 0; i < line.length(); i++)<br>
+                    {<br>
+                        if(isVowel(line.charAt(i)))<br>
+                        {<br>
+                            return true;<br>
+                        }<br>
+                    }<br>
+                    return false;<br>
+                }<br>
+            
+                public static void main(String args[])<br>
+                {<br>
+                    <br>
+                    System.out.println(Test.isStringInsideVowel("hello"));<br>
+                            System.out.println(Test.isStringInsideVowel("kmnpdk"));<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+    </html>

@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <style>
+             p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.util.Scanner;<br>
+
+            //Write a Java method to display the middle character of a string. Note:
+            //a) If the length of the string is odd there will be two middle characters. b) 
+            //If the length of the string is even there will be one middle character.
+            
+              class function3 {
+              public static void main(String[] args)<br>
+                {<br>
+                    Scanner in = new Scanner(System.in);<br>
+                    System.out.print("Input a string: ");<br>
+                    String str = in.nextLine();<br>
+                    System.out.print("The middle character in the string: " + middle(str)+"\n");<br>
+                }<br>
+             public static String middle(String str)<br>
+                {<br>
+                    int position;<br>
+                    int length;<br>
+                    if (str.length() % 2 == 0)<br>
+                    {<br>
+                        position = str.length() / 2 - 1;<br>
+                        length = 2;<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                        position = str.length() / 2;<br>
+                        length = 1;<br>
+                    }<br>
+                    return str.substring(position, position + length);<br>
+                }
+            }
+            
+        </p>
+    </body>
+    </html>
