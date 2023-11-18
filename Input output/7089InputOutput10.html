@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.io.BufferedReader; <br>
+            import java.io.FileReader; <br>
+            import java.io.IOException; <br>
+            
+             class prog10 { <br>
+                public static void main(String[] args)  throws ClassNotFoundException{ <br>
+                    String filePath = "abc.txt"; // Replace with the actual path to your file <br>
+                    <br>
+                    try{  <br>
+                        BufferedReader reader = new BufferedReader(new FileReader(filePath)); <br>
+                        int character; <br>
+                        int lineCount = 0; <br>
+                        int wordCount = 0; <br>
+                        int charCount = 0; <br>
+                        boolean inWord = false; <br>
+            
+                        while ((character = reader.read()) != -1) { <br>
+                            charCount++; <br>
+                            <br>
+                            // Count lines <br>
+                            if (character == '\n') { <br>
+                                lineCount++; <br>
+                            } <br>
+            
+                            // Count words <br>
+                            if (Character.isWhitespace(character)) { <br>
+                                inWord = false; <br>
+                            } else if (!inWord) { <br>
+                                inWord = true; <br>
+                                wordCount++; <br>
+                            } <br>
+                        } <br>
+                        <br>
+                        // Display statistics <br>
+                        System.out.println("Number of lines: " + lineCount); <br>
+                        System.out.println("Number of words: " + wordCount); <br>
+                        System.out.println("Number of characters: " + charCount); <br>
+                        <br>
+                    } catch (IOException e) { <br>
+                        e.printStackTrace(); <br>
+                    } <br>
+                } <br>
+            } <br>
+        </p>
+    </body>
+</html>
+

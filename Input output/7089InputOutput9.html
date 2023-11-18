@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.io.BufferedReader;<br>
+            import java.io.FileReader;<br>
+            import java.io.IOException;<br>
+            
+             class prog9 {<br>
+                public static void main(String[] args) {<br>
+                    // Replace "your_file_path.txt" with the path to your text file
+                    String filePath = "abc.txt";<br>
+                    <br>
+                    try{<br>
+            
+                        BufferedReader reader = new BufferedReader(new FileReader(filePath));<br>
+                        int character;<br>
+                        
+                        // Read and display each character until the end of the file<br>
+                        while ((character = reader.read()) != -1) {<br>
+                            System.out.print((char) character);<br>
+                        }<br>
+                    } catch (IOException e) {<br>
+                        System.out.println("Error reading the file: " + e.getMessage());<br>
+                        e.printStackTrace();<br>
+                    }<br>
+                }<br>
+            }<br>
+        </p>
+    </body>
+</html>
+

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.util.Scanner;  <br>
+
+            class FloatInputExample {  <br>
+                public static void main(String[] args) {  <br>
+                    // Create a Scanner object to read user input  <br>
+                    Scanner scanner = new Scanner(System.in);  <br>
+            
+                    System.out.print("Enter a float number: ");  <br>
+            
+                    // Check if the next token entered by the user is a float  <br>
+                    if (scanner.hasNextFloat()) {  <br>
+                        float userInput = scanner.nextFloat();  <br>
+                        System.out.println("You entered: " + userInput);  <br>
+                    } else {  <br>
+                        System.out.println("Invalid input. Please enter a valid float number.");  <br>
+                    }  <br>
+            
+                    // Close the Scanner to release resources  <br>
+                    scanner.close();  <br>
+                }  <br>
+            }  <br>
+            
+        </p>
+    </body>
+</html>
+

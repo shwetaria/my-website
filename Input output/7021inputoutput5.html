@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+              p{
+               color: white;
+               font-size: 25px; 
+               font-weight: bold; 
+               padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <p><br>
+            import java.util.Scanner; <br>
+            <br>
+             class prog5 { <br>
+                public static void main(String[] args) { <br>
+                    // Create a Scanner object to read input from the console <br>
+                    Scanner scanner = new Scanner(System.in); <br>
+            
+                    // Prompt the user to enter a double <br>
+                    System.out.print("Enter a double: "); <br>
+            
+                    // Check if the next input is a double <br>
+                    if (scanner.hasNextDouble()) { <br>
+                        // Read the double from the user <br>
+                        double userInput = scanner.nextDouble(); <br>
+            
+                        // Display the entered double <br>
+                        System.out.println("You entered: " + userInput); <br>
+            
+                        // Check if the entered double is positive, negative, or zero <br>
+                        if (userInput > 0) { <br>
+                            System.out.println("The entered double is positive."); <br>
+                        } else if (userInput < 0) { <br>
+                            System.out.println("The entered double is negative."); <br>
+                        } else { <br>
+                            System.out.println("The entered double is zero."); <br>
+                        } <br>
+                    } else { <br>
+                        // If the input is not a double, display an error message <br>
+                        System.out.println("Invalid input. Please enter a valid double."); <br>
+                    } <br>
+                    <br>
+                    // Close the scanner <br>
+                    scanner.close(); <br>
+                } <br>
+            } <br>
+            
+            
+        </p>
+    </body>
+</html>
+
